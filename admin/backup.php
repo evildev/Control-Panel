@@ -78,7 +78,7 @@ if (isset($act)) {
 		system('/usr/bin/mysqldump -u'.$username.' -p'.$passwort.' -h localhost '.$db_name.' | /bin/gzip > ' . $path . '/' . $filename . '.sql.gz', $fp);
 		if ($fp==0) echo ''; else echo 'Es ist ein Fehler aufgetreten';
 		$filename_n = $path.'/'.$filename.'.sql.gz';
-		$Header = "From: ECPmin - System <$mail>";
+		$Header = "From: evilADMIN - System <$mail>";
 		$Trenner = md5(uniqid(time()));
 		$Header .= "\n";
 		$Header .= "MIME-Version: 1.0";
