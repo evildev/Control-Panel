@@ -66,14 +66,14 @@ if ($act = "edit") {
 										
 	foreach ($lang_array as $row_lang) { 
 	
-			$nex_lang = array();
+			$cp_lang = array();
 			
 			include(BASEDIR . "/backend/inc/lang/" . $row_lang);
 			
 			
-				$la_array[$nex_lang["LANGUAGE_SHORT"]]["language"] = $nex_lang["LANGUAGE"];
-				$la_array[$nex_lang["LANGUAGE_SHORT"]]["language_short"] = $nex_lang["LANGUAGE_SHORT"];
-				$la_array[$nex_lang["LANGUAGE_SHORT"]]["file"] = $row_lang;
+				$la_array[$cp_lang["LANGUAGE_SHORT"]]["language"] = $cp_lang["LANGUAGE"];
+				$la_array[$cp_lang["LANGUAGE_SHORT"]]["language_short"] = $cp_lang["LANGUAGE_SHORT"];
+				$la_array[$cp_lang["LANGUAGE_SHORT"]]["file"] = $row_lang;
 			
 		
 	}

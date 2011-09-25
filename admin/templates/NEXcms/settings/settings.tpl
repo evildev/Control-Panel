@@ -49,7 +49,7 @@
         </select>
       </div>
       <div class="clear">&nbsp;</div>
-      <div style="float:left; width:200px; padding:5px;">{$lang.cms_sessionexpire}:</div>
+      <div style="float:left; width:200px; padding:5px;">{$lang.cms_sessiocppire}:</div>
       <div style="float:left; width:250px; padding:5px;">
         <input class="bform" style="width: 250px;" id="session_timeout" type="text" name="session_timeout" value="{$session_timeout}" />
       </div>

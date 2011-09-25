@@ -87,21 +87,21 @@ if ($LANG != "") {
 
 include_once(BASEDIR . "/backend/inc/lang/" . $LANG);
 
-foreach ($nex_lang as $key => $val) { 
+foreach ($cp_lang as $key => $val) { 
 
 	$lang[$key] = $val;
 			
 }
 
 define("prefix", $db_prefix);
-define("prefix_nexmin", $db_prefix_nexmin);
+define("prefix_cpmin", $db_prefix_cpmin);
 
-$footer = "<a class=\"copyright\" href=\"http://www.nex-network.de/content/cms/\">NEXmin by NEX-network.de</a>";
+$footer = "<a class=\"copyright\" href=\"http://www.cp-network.de/content/cms/\">NEXmin by NEX-network.de</a>";
 
 
 if (isset($_COOKIE['ecpid']) && $_COOKIE['ecpid'] != '')
 {
-	$sql = $db->Query("SELECT * FROM " . prefix_nexmin . "members LEFT JOIN " . prefix . "usergroup USING (ugroup) WHERE ( id='" . escs($_COOKIE['ecpid']) . "' AND password='" . escs($_COOKIE['ecppass']) . "' ) LIMIT 1");
+	$sql = $db->Query("SELECT * FROM " . prefix_cpmin . "members LEFT JOIN " . prefix . "usergroup USING (ugroup) WHERE ( id='" . escs($_COOKIE['ecpid']) . "' AND password='" . escs($_COOKIE['ecppass']) . "' ) LIMIT 1");
 	$USERARRAY = $sql->fetchrow();
 	
 	$control = false; 
@@ -151,7 +151,7 @@ if (isset($_COOKIE['ecpid']) && $_COOKIE['ecpid'] != '')
 		$USERRIGHTS = explode("|", $perms->permissions);
 		$area = 1;
 		foreach ($USERRIGHTS AS $VAL) $HTTP_SESSION_VARS[$VAL] = 1;
-		$sql = $db->Query("UPDATE " . prefix_nexmin . "members SET user_lastonline = '" . time() . "' WHERE id ='" . $USERID . "'");
+		$sql = $db->Query("UPDATE " . prefix_cpmin . "members SET user_lastonline = '" . time() . "' WHERE id ='" . $USERID . "'");
 	}
 }
 

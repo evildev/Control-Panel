@@ -47,7 +47,7 @@ if ($now > $LASTONLINE_LOGOUT && $LOGGEDIN == 1 && $LASTONLINE != "0" && $_COOKI
 	
 if ( $GLOBALS['IP'] != $LASTIP && $LOGGEDIN == 1 ) {
 	
-	$sql = $db->Query("UPDATE " . prefix_nexmin . "members SET loggedin = '0' WHERE id ='" . $USERID . "'");
+	$sql = $db->Query("UPDATE " . prefix_cpmin . "members SET loggedin = '0' WHERE id ='" . $USERID . "'");
 	header("Location: ../index.php?m=logout&reason=ipconflict");
 	exit(); }
 	

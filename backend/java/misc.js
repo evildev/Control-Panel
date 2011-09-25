@@ -13,7 +13,7 @@ function ChangeFlag(CurrentInp) {
 
 }
 
-function go2next(CurrentInp) {
+function go2cpt(CurrentInp) {
 
 	if (JumpFlag==1) {
 	

@@ -40,11 +40,11 @@ if ($act == "do-savedata") {
 	$orderdate = mktime(0, 0, 0, $orderdate[1], $orderdate[0], $orderdate[2]);
 		
 		
-	$sql = $db->Query("INSERT " . prefix_nexmin . "members (member, password, email, surname, name, country, regdate, lastip, ugroup, status, user_lastonline, user_lastonline_temp, loggedin, verify ) VALUES ('1', '$password', '$email', '$surname', '$name', '$country', '$orderdate', '0', '$rank', '$rank', '0', '0', '0', '1')");
+	$sql = $db->Query("INSERT " . prefix_cpmin . "members (member, password, email, surname, name, country, regdate, lastip, ugroup, status, user_lastonline, user_lastonline_temp, loggedin, verify ) VALUES ('1', '$password', '$email', '$surname', '$name', '$country', '$orderdate', '0', '$rank', '$rank', '0', '0', '0', '1')");
 	
 	$now = time();
 	
-	$sql = $db->Query("INSERT " . prefix_nexmin . "log (member_id, target_id, date, action, what, module ) VALUES ('$USERID', '" . mysql_insert_id() . "', '$now', '1', 'Kunde', 'customer_add')");
+	$sql = $db->Query("INSERT " . prefix_cpmin . "log (member_id, target_id, date, action, what, module ) VALUES ('$USERID', '" . mysql_insert_id() . "', '$now', '1', 'Kunde', 'customer_add')");
 	
 	$saveok = TRUE;
 	

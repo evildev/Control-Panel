@@ -329,7 +329,7 @@ class Smarty_Compiler extends Smarty {
                 $text_blocks[$i + 1] = ltrim($text_blocks[$i + 1]);
             }
             if ($strip) {
-                /* strip all $text_blocks before the next '/strip' */
+                /* strip all $text_blocks before the cpt '/strip' */
                 for ($j = $i + 1; $j < $for_max; $j++) {
                     /* remove leading and trailing whitespaces of each line */
                     $text_blocks[$j] = preg_replace('![\t ]*[\r\n]+[\t ]*!', '', $text_blocks[$j]);
@@ -465,7 +465,7 @@ class Smarty_Compiler extends Smarty {
             case 'else':
                 list($_open_tag) = end($this->_tag_stack);
                 if ($_open_tag != 'if' && $_open_tag != 'elseif')
-                    $this->_syntax_error('unexpected {else}', E_USER_ERROR, __FILE__, __LINE__);
+                    $this->_syntax_error('ucppected {else}', E_USER_ERROR, __FILE__, __LINE__);
                 else
                     $this->_push_tag('else');
                 return '<?php else: ?>';
@@ -473,7 +473,7 @@ class Smarty_Compiler extends Smarty {
             case 'elseif':
                 list($_open_tag) = end($this->_tag_stack);
                 if ($_open_tag != 'if' && $_open_tag != 'elseif')
-                    $this->_syntax_error('unexpected {elseif}', E_USER_ERROR, __FILE__, __LINE__);
+                    $this->_syntax_error('ucppected {elseif}', E_USER_ERROR, __FILE__, __LINE__);
                 if ($_open_tag == 'if')
                     $this->_push_tag('elseif');
                 return $this->_compile_if_tag($tag_args, true);
@@ -1126,7 +1126,7 @@ class Smarty_Compiler extends Smarty {
                  {$section_props}['index'] += {$section_props}['step'], {$section_props}['iteration']++):\n";
         $output .= "{$section_props}['rownum'] = {$section_props}['iteration'];\n";
         $output .= "{$section_props}['index_prev'] = {$section_props}['index'] - {$section_props}['step'];\n";
-        $output .= "{$section_props}['index_next'] = {$section_props}['index'] + {$section_props}['step'];\n";
+        $output .= "{$section_props}['index_cpt'] = {$section_props}['index'] + {$section_props}['step'];\n";
         $output .= "{$section_props}['first']      = ({$section_props}['iteration'] == 1);\n";
         $output .= "{$section_props}['last']       = ({$section_props}['iteration'] == {$section_props}['total']);\n";
 
@@ -1359,7 +1359,7 @@ class Smarty_Compiler extends Smarty {
                        what to operate on. */
                     $is_arg = implode(' ', array_slice($tokens, $is_arg_start, $i - $is_arg_start));
 
-                    /* Pass all tokens from next one until the end to the
+                    /* Pass all tokens from cpt one until the end to the
                        'is' expression parsing function. The function will
                        return modified tokens, where the first one is the result
                        of the 'is' expression and the rest are the tokens it
@@ -1370,7 +1370,7 @@ class Smarty_Compiler extends Smarty {
                     array_splice($tokens, $is_arg_start, count($tokens), $new_tokens);
 
                     /* Adjust argument start so that it won't change from the
-                       current position for the next iteration. */
+                       current position for the cpt iteration. */
                     $i = $is_arg_start;
                     break;
 

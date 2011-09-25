@@ -14,7 +14,7 @@
 	
 		$vemail = $_POST["vemail"]; 
 		
-		$sql = $db->Query("SELECT email FROM " . prefix_nexmin . "members WHERE email = '" . $vemail . "' LIMIT 1");
+		$sql = $db->Query("SELECT email FROM " . prefix_cpmin . "members WHERE email = '" . $vemail . "' LIMIT 1");
 		$result = $sql->fetchrow();
 
 		$email = $result->email;
@@ -23,7 +23,7 @@
 			 
 			$verify = (generatePassword($length=25));
 			
-			$sql = $db->Query("UPDATE " . prefix_nexmin . "members SET verify = '" . $verify . "' WHERE email = '" . $vemail . "' LIMIT 1");
+			$sql = $db->Query("UPDATE " . prefix_cpmin . "members SET verify = '" . $verify . "' WHERE email = '" . $vemail . "' LIMIT 1");
 		
 			// Zugangsdaten E-Mail versenden
 	
@@ -58,7 +58,7 @@
 		$vemail = $_POST["vemail"]; 
 		$vcode = $_POST["vcode"]; 
 		
-		$sql = $db->Query("SELECT verify FROM " . prefix_nexmin . "members WHERE email = '" . $vemail . "' LIMIT 1");
+		$sql = $db->Query("SELECT verify FROM " . prefix_cpmin . "members WHERE email = '" . $vemail . "' LIMIT 1");
 		$result = $sql->fetchrow();
 
 		$verify = $result->verify;
@@ -67,7 +67,7 @@
 		
 			$password = (generatePassword($length=5));
 	
-			$sql = $db->Query("UPDATE " . prefix_nexmin . "members SET password = '" . md5($password) . "' WHERE email = '" . $vemail . "'");
+			$sql = $db->Query("UPDATE " . prefix_cpmin . "members SET password = '" . md5($password) . "' WHERE email = '" . $vemail . "'");
 			
 			// Zugangsdaten E-Mail versenden
 	

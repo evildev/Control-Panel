@@ -82,7 +82,7 @@
 ">Server hosted by <?php echo $this->_tpl_vars['SITE_FIRMA']; ?>
 </a></div>
         <!-- Das nachfolgende Copyright darf laut Lizenzvereinbarung nicht entfernt oder verändert werden! -->
-        <div class="info"><a href="http://www.nex-network.de">Copyright &copy; 2010 NEX-network.de</a></div>
+        <div class="info"><a href="http://www.cp-network.de">Copyright &copy; 2010 NEX-network.de</a></div>
         <div id="maincontent_bottom" class="maincontent_bottom">&nbsp;</div>
       </div>
     </div>

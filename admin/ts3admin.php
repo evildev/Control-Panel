@@ -22,7 +22,7 @@
 	
 
  
-$sql = $db->Query("SELECT * FROM " . prefix_nexmin . "voiceserver WHERE id = '$sid'");
+$sql = $db->Query("SELECT * FROM " . prefix_cpmin . "voiceserver WHERE id = '$sid'");
 $result = $sql->fetchrow();
 
 $masterid = $result->masterid;
@@ -31,7 +31,7 @@ $memberid = $result->memberid;
 
 if ($memberid != $UID && $ADMIN != 1) { exit(); };
 
-$sql = $db->Query("SELECT * FROM " . prefix_nexmin . "voiceserver_master WHERE id = '$masterid'");
+$sql = $db->Query("SELECT * FROM " . prefix_cpmin . "voiceserver_master WHERE id = '$masterid'");
 $result = $sql->fetchrow();
 	
 $serverip = $result->serverip;
