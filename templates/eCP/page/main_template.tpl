@@ -10,7 +10,7 @@
 <meta name="Description" content="Teamspeak 3 Server Webinterface" />
 <meta name="Keywords" content="Teamspeak 3 Server Webinterface" />
 <meta name="Robots" content="INDEX,FOLLOW" />
-<meta name="Generator" content="NEXmin.v{$SITE_VERSION} - Copyright (C) 2010 evilDEV.de. All rights reserved." />
+<meta name="Generator" content="ECPmin.v{$SITE_VERSION} - Copyright (C) 2010 evilDEV.de. All rights reserved." />
 <meta name="Language" content="de" />
 <link type="image/x-icon" rel="icon" href="favicon.ico" />
 <link type="text/css" rel="stylesheet" href="templates/{$theme}/css/header.css" />
