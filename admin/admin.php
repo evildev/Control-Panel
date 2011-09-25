@@ -6,7 +6,7 @@
 //
 /*  
 	
-	evilInterface Copyright (C) 2011 evilDEV.de
+	eCP.v0.9d Copyright (C) 2011  evilDEV.de
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -48,7 +48,7 @@ if ($now > $LASTONLINE_LOGOUT && $LOGGEDIN == 1 && $LASTONLINE != "0") {
 	
 if ( $GLOBALS['IP'] != $LASTIP && $LOGGEDIN == 1 ) {
 	
-	$sql = $db->Query("UPDATE " . prefix_cpmin . "members SET loggedin = '0' WHERE id ='" . $USERID . "'");
+	$sql = $db->Query("UPDATE " . prefix_nexmin . "members SET loggedin = '0' WHERE id ='" . $USERID . "'");
 	header("Location: ../index.php?m=logout&reason=ipconflict");
 	exit(); }
 		
@@ -104,7 +104,7 @@ if (!$template) $template = fetchmaintemplate("12");
 	$mid = $_GET['mid'];
 	$udpport = $_GET['udpport'];
 	
-	$sql_vo = $db->Query("SELECT * FROM " . prefix_cpmin . "voiceserver WHERE masterid = '$mid' AND udpport = '$udpport' OR id = '$sid'");
+	$sql_vo = $db->Query("SELECT * FROM " . prefix_nexmin . "voiceserver WHERE masterid = '$mid' AND udpport = '$udpport' OR id = '$sid'");
 	$num = $sql_vo->numrows();
 
 	$vo_array = array();

@@ -6,11 +6,11 @@
 <meta http-equiv="pragma" content="no-cache" />
 <meta http-equiv="imagetoolbar" content="no" />
 <meta name="Author" content="Florian Schroeder" />
-<meta name="Copyright" content="Copyright 2010 by evilDEV.de" />
+<meta name="Copyright" content="Copyright 2011 by evilDEV.de" />
 <meta name="Description" content="Teamspeak 3 Server Webinterface" />
 <meta name="Keywords" content="Teamspeak 3 Server Webinterface" />
 <meta name="Robots" content="INDEX,FOLLOW" />
-<meta name="Generator" content="evilADMIN.v{$SITE_VERSION} - Copyright (C) 2010 evilDEV.de. All rights reserved." />
+<meta name="Generator" content="ECPmin.v{$SITE_VERSION} - Copyright (C) 2011 evilDEV.de. All rights reserved." />
 <meta name="Language" content="de" />
 <link type="image/x-icon" rel="icon" href="favicon.ico" />
 <link type="text/css" rel="stylesheet" href="templates/{$theme}/css/header.css" />

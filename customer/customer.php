@@ -6,7 +6,7 @@
 //
 /*  
 	
-	eCP v0.9e Copyright (C) 2010  evilDEV.de
+	eCP v0.9e Copyright (C) 2011  evilDEV.de
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -47,7 +47,7 @@ if ($now > $LASTONLINE_LOGOUT && $LOGGEDIN == 1 && $LASTONLINE != "0" && $_COOKI
 	
 if ( $GLOBALS['IP'] != $LASTIP && $LOGGEDIN == 1 ) {
 	
-	$sql = $db->Query("UPDATE " . prefix_cpmin . "members SET loggedin = '0' WHERE id ='" . $USERID . "'");
+	$sql = $db->Query("UPDATE " . prefix_nexmin . "members SET loggedin = '0' WHERE id ='" . $USERID . "'");
 	header("Location: ../index.php?m=logout&reason=ipconflict");
 	exit(); }
 	
@@ -112,7 +112,7 @@ elseif ( $islogged == 1 ) {
 	
 	$sid = $_GET["sid"];
 	
-	$sql_vo = $db->Query("SELECT * FROM " . prefix_cpmin . "voiceserver WHERE memberid = ".$_COOKIE['ecpid']." ORDER BY id ASC");
+	$sql_vo = $db->Query("SELECT * FROM " . prefix_nexmin . "voiceserver WHERE memberid = ".$_COOKIE['ecpid']." ORDER BY id ASC");
 	$num = $sql_vo->numrows();
 	$num_vc = $num;
 	
@@ -132,7 +132,7 @@ elseif ( $islogged == 1 ) {
 			    'apasswd' => $row->apasswd ) 
 		); 
 	
-	$sql = $db->Query("SELECT * FROM " . prefix_cpmin . "voiceserver_master WHERE id = '$row->masterid'");
+	$sql = $db->Query("SELECT * FROM " . prefix_nexmin . "voiceserver_master WHERE id = '$row->masterid'");
 	$result = $sql->fetchrow();
 	
 	$tcpport = $result->tcpport;

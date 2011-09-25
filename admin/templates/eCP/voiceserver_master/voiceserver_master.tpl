@@ -125,7 +125,7 @@
       <div class="clear">&nbsp;</div>
       <div style="float:left; width:150px; padding:5px;">Maximale Useranzahl:</div>
       <div style="float:left; width:250px; padding:5px;">
-        <input class="bform" style="width: 175px;" id="server_maxusers" type="text" name="server_maxusers" value="24" />
+        <input class="bform" style="width: 175px;" id="server_maxusers" type="text" name="server_maxusers" value="32" />
       </div>
       
       <div class="clear"> </div>

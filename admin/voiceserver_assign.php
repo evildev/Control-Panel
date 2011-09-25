@@ -32,7 +32,7 @@ if ($act == "do-savedata") {
 	
 	$slots = "0";
 	
-	$sql = $db->Query("SELECT * FROM " . prefix_cpmin . "voiceserver_master WHERE id = '$masterid' LIMIT 1");
+	$sql = $db->Query("SELECT * FROM " . prefix_nexmin . "voiceserver_master WHERE id = '$masterid' LIMIT 1");
 	$result = $sql->fetchrow();
 	
 	$serverip = $result->serverip;
@@ -40,7 +40,7 @@ if ($act == "do-savedata") {
 	$httpport = $result->httpport;
 	
 	
-	$sql = $db->Query("INSERT " . prefix_cpmin . "voiceserver (memberid, masterid, serverip, udpport, tcpport, httpport, typ, slots, auser, apasswd ) VALUES ('$memberid', '$masterid', '$serverip', '$udpport', '$tcpport', '$httpport', 'TS3', '$slots', 'admin', 'Keine Token vorhanden!' )");
+	$sql = $db->Query("INSERT " . prefix_nexmin . "voiceserver (memberid, masterid, serverip, udpport, tcpport, httpport, typ, slots, auser, apasswd ) VALUES ('$memberid', '$masterid', '$serverip', '$udpport', '$tcpport', '$httpport', 'TS3', '$slots', 'admin', 'Keine Token vorhanden!' )");
 	
 	$saveok = TRUE;
 	
@@ -48,7 +48,7 @@ if ($act == "do-savedata") {
 	
 	$now = time();
 	
-	$sql = $db->Query("INSERT " . prefix_cpmin . "log (member_id, target_id, date, action, what, module ) VALUES ('$USERID', '" . mysql_insert_id() . "', '$now', '1', 'Voiceserver', 'voiceserver_assign')");
+	$sql = $db->Query("INSERT " . prefix_nexmin . "log (member_id, target_id, date, action, what, module ) VALUES ('$USERID', '" . mysql_insert_id() . "', '$now', '1', 'Voiceserver', 'voiceserver_assign')");
 	
 	 } 
 	
@@ -60,7 +60,7 @@ if ($act == "do-savedata") {
 	
 // Benötigte Datensätze auslesen
 
-	$sql_mv = $db->Query("SELECT * FROM " . prefix_cpmin . "voiceserver_master ORDER BY id ASC");
+	$sql_mv = $db->Query("SELECT * FROM " . prefix_nexmin . "voiceserver_master ORDER BY id ASC");
 	$num = $sql_mv->numrows();
 
 	$mv_array = array();
@@ -77,7 +77,7 @@ if ($act == "do-savedata") {
 		); 
 	}
 	
-	$sql_cu = $db->Query("SELECT * FROM " . prefix_cpmin . "members ORDER BY surname ASC");
+	$sql_cu = $db->Query("SELECT * FROM " . prefix_nexmin . "members ORDER BY surname ASC");
 	$num = $sql_cu->numrows();
 	
 	$cu_array = array();

@@ -3,7 +3,7 @@
 
 if(!defined("BASEDIR")) exit;
 if (!empty($_POST['email']) && !empty($_POST['pass'])) {
-	$sql = $db->Query("SELECT * FROM " . prefix_cpmin . "members WHERE ( email='".escs($_POST['email'])."' AND password='".md5($_POST["pass"])."') ");
+	$sql = $db->Query("SELECT * FROM " . prefix_nexmin . "members WHERE ( email='".escs($_POST['email'])."' AND password='".md5($_POST["pass"])."') ");
 	$row = $sql->fetchrow();
 	$name = $row->name;
 	$email = $row->email;
@@ -12,13 +12,13 @@ if (!empty($_POST['email']) && !empty($_POST['pass'])) {
 	$user_lastonline = $row->user_lastonline;
 	
 	$now = time();
-	$sql = $db->Query("UPDATE " . prefix_cpmin . "members SET user_lastonline_temp = user_lastonline WHERE id ='" . $id . "'");
+	$sql = $db->Query("UPDATE " . prefix_nexmin . "members SET user_lastonline_temp = user_lastonline WHERE id ='" . $id . "'");
 	
-	$sql = $db->Query("UPDATE " . prefix_cpmin . "members SET user_lastonline = " . $now . " WHERE id ='" . $id . "'");
+	$sql = $db->Query("UPDATE " . prefix_nexmin . "members SET user_lastonline = " . $now . " WHERE id ='" . $id . "'");
 	
-	$sql = $db->Query("UPDATE " . prefix_cpmin . "members SET loggedin = '1' WHERE id ='" . $id . "'");
+	$sql = $db->Query("UPDATE " . prefix_nexmin . "members SET loggedin = '1' WHERE id ='" . $id . "'");
 	
-	$sql = $db->Query("UPDATE " . prefix_cpmin . "members SET lastip = '". $GLOBALS['IP'] . "' WHERE id ='" . $id . "'");
+	$sql = $db->Query("UPDATE " . prefix_nexmin . "members SET lastip = '". $GLOBALS['IP'] . "' WHERE id ='" . $id . "'");
 	
 		
 	if(!$row->id){
@@ -37,7 +37,7 @@ if (!empty($_POST['email']) && !empty($_POST['pass'])) {
 	
 			$now = time();
 	
-			$sql = $db->Query("INSERT " . prefix_cpmin . "log (member_id, target_id, date, action, what, module ) VALUES ('$id', '$id', '$now', '9', 'Webinterface', 'login')");
+			$sql = $db->Query("INSERT " . prefix_nexmin . "log (member_id, target_id, date, action, what, module ) VALUES ('$id', '$id', '$now', '9', 'Webinterface', 'login')");
 			
 			setcookie("ecpid", $row->id, time()+365*24*3600, '/');
 			setcookie("ecppass", $row->password,time()+365*24*3600, '/');

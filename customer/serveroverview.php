@@ -28,7 +28,7 @@ $ts3 = new ts3;
 	
 	// Summen Anfang
 	
-	$sql_vc = $db->Query("SELECT * FROM " . prefix_cpmin . "voiceserver WHERE memberid = '$USERID' ORDER BY id ASC");
+	$sql_vc = $db->Query("SELECT * FROM " . prefix_nexmin . "voiceserver WHERE memberid = '$USERID' ORDER BY id ASC");
 	$num = $sql_vc->numrows();
 	$num_voiceserver = $num;
 

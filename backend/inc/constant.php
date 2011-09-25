@@ -11,15 +11,15 @@
 // MySQLkonstanten - Bei Bedarf editieren!
 	
 	$db_host = "localhost";
-	$db_user = "user";
-	$db_pass = "pass";
-	$db_name = "name";
+	$db_user = "root";
+	$db_pass = "";
+	$db_name = "nr.7";
 	
 	
 // MySQLkonstanten - Nur editieren, wenn man weiﬂ was man macht ;)
 
-	$db_prefix = "eviladmin_";
-	$db_prefix_cpmin = "eviladmin_";
+	$db_prefix = "ts3admin_";
+	$db_prefix_nexmin = "ts3admin_";
 	
 
 // Systemkonstanten - Nicht editieren!
@@ -29,7 +29,7 @@
 	
 // Sollen MySQL Fehlermeldungen ausgegeben werden - "On" = Ja, "Off" = Nein
 
-define(DEBUG, "OFF");
+#define(DEBUG, "OFF");
 
 // Sollen PHP Fehlermeldungen ausgegeben werden - E_ALL^E_NOTICE = Ja, 0 = Nein 
 

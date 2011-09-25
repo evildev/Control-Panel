@@ -44,15 +44,15 @@ if ($act == "delete") {
 	$id = $_GET["id"];
 	
 	
-	$sql = $db->Query("DELETE FROM " . prefix_cpmin . "members WHERE id = '$id'");
+	$sql = $db->Query("DELETE FROM " . prefix_nexmin . "members WHERE id = '$id'");
 	
 	$now = time();
 	
-	$sql = $db->Query("INSERT " . prefix_cpmin . "log (member_id, target_id, date, action, what, module ) VALUES ('$USERID', '$id', '$now', '2', 'Kunde', 'customer')");
+	$sql = $db->Query("INSERT " . prefix_nexmin . "log (member_id, target_id, date, action, what, module ) VALUES ('$USERID', '$id', '$now', '2', 'Kunde', 'customer')");
 	
 	
 		
-	$sql_vo = $db->Query("SELECT * FROM " . prefix_cpmin . "voiceserver WHERE memberid = '$id'");
+	$sql_vo = $db->Query("SELECT * FROM " . prefix_nexmin . "voiceserver WHERE memberid = '$id'");
 	$num = $sql_vo->numrows();
 	$count_member = $num;
 	
@@ -69,14 +69,14 @@ if ($act == "delete") {
 	$httpport = $row->httpport;
 	$masterid = $row->masterid;
 		
-	$sql = $db->Query("SELECT * FROM " . prefix_cpmin . "voiceserver_master WHERE id = '$masterid'");
+	$sql = $db->Query("SELECT * FROM " . prefix_nexmin . "voiceserver_master WHERE id = '$masterid'");
 	$result = $sql->fetchrow();
 	
 	$typ = $result->typ;
 	$sadmin = $result->sadmin;
 	$spasswd = $result->spasswd;
 	
-	$sql = $db->Query("DELETE FROM " . prefix_cpmin . "voiceserver WHERE memberid = '$mid' AND udpport = '$udpport' LIMIT 1");
+	$sql = $db->Query("DELETE FROM " . prefix_nexmin . "voiceserver WHERE memberid = '$mid' AND udpport = '$udpport' LIMIT 1");
 	
 		
 	if ( $typ == "TS2" OR $typ == "1" ) {
@@ -149,7 +149,7 @@ if ($act == "delete") {
 	$ugroup = $_POST["ugroup"];
 	
 	
-	$sql = $db->Query("SELECT * FROM " . prefix_cpmin . "members WHERE id = $cid");
+	$sql = $db->Query("SELECT * FROM " . prefix_nexmin . "members WHERE id = $cid");
 	$result = $sql->fetchrow();
 	
 	$password = $result->password;
@@ -157,11 +157,11 @@ if ($act == "delete") {
 	
 	if ( $_POST["ftppasswd"] != "password" ? $password = md5($_POST["ftppasswd"]) : $password = $password );
 	
-	$sql = $db->Query("UPDATE " . prefix_cpmin . "members SET surname = '$surname', name = '$name', email = '$email', password = '$password', ugroup = '$ugroup' WHERE id = '$cid'");
+	$sql = $db->Query("UPDATE " . prefix_nexmin . "members SET surname = '$surname', name = '$name', email = '$email', password = '$password', ugroup = '$ugroup' WHERE id = '$cid'");
 	
 	$now = time();
 	
-	$sql = $db->Query("INSERT " . prefix_cpmin . "log (member_id, target_id, date, action, what, module ) VALUES ('$USERID', '$cid', '$now', '3', 'Kunde', 'customer')");
+	$sql = $db->Query("INSERT " . prefix_nexmin . "log (member_id, target_id, date, action, what, module ) VALUES ('$USERID', '$cid', '$now', '3', 'Kunde', 'customer')");
 	
 	
 	$saveok = TRUE;
@@ -174,7 +174,7 @@ if ($act == "delete") {
 	$sid = $_GET["sid"];
 	
 	
-	$sql_vo = $db->Query("SELECT * FROM " . prefix_cpmin . "voiceserver WHERE id = '$sid'");
+	$sql_vo = $db->Query("SELECT * FROM " . prefix_nexmin . "voiceserver WHERE id = '$sid'");
 	$num = $sql_vo->numrows();
 	$count_member = $num;
 	
@@ -191,14 +191,14 @@ if ($act == "delete") {
 	$httpport = $row->httpport;
 	$masterid = $row->masterid;
 		
-	$sql = $db->Query("SELECT * FROM " . prefix_cpmin . "voiceserver_master WHERE id = '$masterid'");
+	$sql = $db->Query("SELECT * FROM " . prefix_nexmin . "voiceserver_master WHERE id = '$masterid'");
 	$result = $sql->fetchrow();
 	
 	$typ = $result->typ;
 	$sadmin = $result->sadmin;
 	$spasswd = $result->spasswd;
 	
-	$sql = $db->Query("DELETE FROM " . prefix_cpmin . "voiceserver WHERE memberid = '$mid' AND udpport = '$udpport' LIMIT 1");
+	$sql = $db->Query("DELETE FROM " . prefix_nexmin . "voiceserver WHERE memberid = '$mid' AND udpport = '$udpport' LIMIT 1");
 	
 		
 	if ( $typ == "TS2" OR $typ == "1" ) {
@@ -259,7 +259,7 @@ if ($act == "delete") {
 	$sid = $_REQUEST["sid"]; 
 	
 	
-	$sql_sl = $db->Query("SELECT * FROM " . prefix_cpmin . "voiceserver WHERE id = '$sid'");
+	$sql_sl = $db->Query("SELECT * FROM " . prefix_nexmin . "voiceserver WHERE id = '$sid'");
 	$result = $sql_sl->fetchrow();
 	
 	$id = $result->id;
@@ -270,7 +270,7 @@ if ($act == "delete") {
 	$typ = $result->typ;
 	$masterid = $result->masterid;
 	
-	$sql = $db->Query("SELECT * FROM " . prefix_cpmin . "voiceserver_master WHERE id = '$masterid'");
+	$sql = $db->Query("SELECT * FROM " . prefix_nexmin . "voiceserver_master WHERE id = '$masterid'");
 	$result = $sql->fetchrow();
 	
 	$sadmin = $result->sadmin;
@@ -302,7 +302,7 @@ if ($act == "delete") {
 	
 		$now = time();
 	
-		$sql = $db->Query("INSERT " . prefix_cpmin . "log (member_id, target_id, date, action, what, module ) VALUES ('$USERID', '$sid', '$now', '7', 'Voiceserver', 'customer')");
+		$sql = $db->Query("INSERT " . prefix_nexmin . "log (member_id, target_id, date, action, what, module ) VALUES ('$USERID', '$sid', '$now', '7', 'Voiceserver', 'customer')");
 	
 	
 		$tmpl->assign("startok", $startok);
@@ -336,7 +336,7 @@ if ($act == "delete") {
 	
 		$now = time();
 	
-		$sql = $db->Query("INSERT " . prefix_cpmin . "log (member_id, target_id, date, action, what, module ) VALUES ('$USERID', '$sid', '$now', '7', 'Voiceserver', 'customer')");
+		$sql = $db->Query("INSERT " . prefix_nexmin . "log (member_id, target_id, date, action, what, module ) VALUES ('$USERID', '$sid', '$now', '7', 'Voiceserver', 'customer')");
 	
 	
 		$tmpl->assign("start", $start);
@@ -351,7 +351,7 @@ if ($do == "server-stop") {
 	$sid = $_REQUEST["sid"]; 
 	
 	
-	$sql_sl = $db->Query("SELECT * FROM " . prefix_cpmin . "voiceserver WHERE id = '$sid'");
+	$sql_sl = $db->Query("SELECT * FROM " . prefix_nexmin . "voiceserver WHERE id = '$sid'");
 	$result = $sql_sl->fetchrow();
 	
 	$id = $result->id;
@@ -362,7 +362,7 @@ if ($do == "server-stop") {
 	$typ = $result->typ;
 	$masterid = $result->masterid;
 	
-	$sql = $db->Query("SELECT * FROM " . prefix_cpmin . "voiceserver_master WHERE id = '$masterid'");
+	$sql = $db->Query("SELECT * FROM " . prefix_nexmin . "voiceserver_master WHERE id = '$masterid'");
 	$result = $sql->fetchrow();
 	
 	$sadmin = $result->sadmin;
@@ -387,7 +387,7 @@ if ($do == "server-stop") {
 	
 		$now = time();
 	
-		$sql = $db->Query("INSERT " . prefix_cpmin . "log (member_id, target_id, date, action, what, module ) VALUES ('$USERID', '$sid', '$now', '8', 'Voiceserver', 'customer')");
+		$sql = $db->Query("INSERT " . prefix_nexmin . "log (member_id, target_id, date, action, what, module ) VALUES ('$USERID', '$sid', '$now', '8', 'Voiceserver', 'customer')");
 	
 	
 		$tmpl->assign("stopok", $stopok);
@@ -419,7 +419,7 @@ if ($do == "server-stop") {
 	
 		$now = time();
 	
-		$sql = $db->Query("INSERT " . prefix_cpmin . "log (member_id, target_id, date, action, what, module ) VALUES ('$USERID', '$sid', '$now', '8', 'Voiceserver', 'customer')");
+		$sql = $db->Query("INSERT " . prefix_nexmin . "log (member_id, target_id, date, action, what, module ) VALUES ('$USERID', '$sid', '$now', '8', 'Voiceserver', 'customer')");
 	
 	
 		$tmpl->assign("stopok", $stopok);
@@ -432,7 +432,7 @@ if ($do == "server-stop") {
 	
 	if ($cid != "0") {
 	
-	$sql_cu = $db->Query("SELECT * FROM " . prefix_cpmin . "members WHERE id = '$cid'");
+	$sql_cu = $db->Query("SELECT * FROM " . prefix_nexmin . "members WHERE id = '$cid'");
 	$result = $sql_cu->fetchrow();
 	
 	$id = $result->id;
@@ -463,7 +463,7 @@ if ($do == "server-stop") {
 	}
 	
 	
-	$sql_vc3 = $db->Query("SELECT * FROM " . prefix_cpmin . "voiceserver WHERE memberid = '$cid' AND typ = 'TS3' ORDER BY id ASC");
+	$sql_vc3 = $db->Query("SELECT * FROM " . prefix_nexmin . "voiceserver WHERE memberid = '$cid' AND typ = 'TS3' ORDER BY id ASC");
 	$num = $sql_vc3->numrows();
 	$num_voiceserver3 = $num;
 
@@ -484,7 +484,7 @@ if ($do == "server-stop") {
 	$vc3_array_count = $vc3_array_count + 1;
 	
 	
-	$sql = $db->Query("SELECT * FROM " . prefix_cpmin . "voiceserver_master WHERE id = '$row->masterid'");
+	$sql = $db->Query("SELECT * FROM " . prefix_nexmin . "voiceserver_master WHERE id = '$row->masterid'");
 	$result = $sql->fetchrow();
 	
 	$typ = $result->typ;
@@ -535,7 +535,7 @@ if ($do == "server-stop") {
 	 	 
 	 // Log Anfang
 	 
-	$sql_log = $db->Query("SELECT * FROM " . prefix_cpmin . "log WHERE member_id = '$cid' OR target_id = '$cid' ORDER BY date DESC");
+	$sql_log = $db->Query("SELECT * FROM " . prefix_nexmin . "log WHERE member_id = '$cid' OR target_id = '$cid' ORDER BY date DESC");
 	$num = $sql_log->numrows();
 	$num_logs = $num;
 	
@@ -544,7 +544,7 @@ if ($do == "server-stop") {
 	$start = prepage() * $limit - $limit;
 	
 	
-	$sql_log = $db->Query("SELECT * FROM " . prefix_cpmin . "log WHERE member_id = '$cid' OR target_id = '$cid' ORDER BY date DESC LIMIT $start,$limit");
+	$sql_log = $db->Query("SELECT * FROM " . prefix_nexmin . "log WHERE member_id = '$cid' OR target_id = '$cid' ORDER BY date DESC LIMIT $start,$limit");
 	$num = $sql_log->numrows();
 
 	$log_array = array();
@@ -562,7 +562,7 @@ if ($do == "server-stop") {
 	$a = $a + 1;
 	
 	
-	$sql = $db->Query("SELECT * FROM " . prefix_cpmin . "members WHERE id = '$row->member_id' LIMIT 1");
+	$sql = $db->Query("SELECT * FROM " . prefix_nexmin . "members WHERE id = '$row->member_id' LIMIT 1");
 	$result = $sql->fetchrow();
 	
 	$log_name = $result->name;
@@ -667,14 +667,14 @@ if ($do == "server-stop") {
 		
 		if ( $search[1] != "" ? $search = $search[1] : $search = $search[0] );
 			
-			$sql_cu = $db->Query("SELECT * FROM " . prefix_cpmin . "members WHERE id = '$search' OR email LIKE '%$search%' OR name LIKE '%$search%' OR surname LIKE '%$search%' OR phone = '$search' ORDER BY $sortby $sortorder");
+			$sql_cu = $db->Query("SELECT * FROM " . prefix_nexmin . "members WHERE id = '$search' OR email LIKE '%$search%' OR name LIKE '%$search%' OR surname LIKE '%$search%' OR phone = '$search' ORDER BY $sortby $sortorder");
 			
 		$seiten = 1;
 	
 			
 	} else {
 		
-		$sql = $db->Query("SELECT * FROM " . prefix_cpmin . "members ORDER BY $sortby $sortorder");
+		$sql = $db->Query("SELECT * FROM " . prefix_nexmin . "members ORDER BY $sortby $sortorder");
 		
 		$num = $sql->numrows();
 	
@@ -683,7 +683,7 @@ if ($do == "server-stop") {
 		$start = prepage() * $limit - $limit;
 	
 	
-		$sql_cu = $db->Query("SELECT * FROM " . prefix_cpmin . "members ORDER BY $sortby $sortorder LIMIT $start,$limit");
+		$sql_cu = $db->Query("SELECT * FROM " . prefix_nexmin . "members ORDER BY $sortby $sortorder LIMIT $start,$limit");
 	
 	
 	}

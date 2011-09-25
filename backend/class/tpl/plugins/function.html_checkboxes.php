@@ -20,7 +20,7 @@
  *           - options    (optional) - associative array
  *           - checked    (optional) - array default not set
  *           - separator  (optional) - ie <br> or &nbsp;
- *           - output     (optional) - the output cpt to each checkbox
+ *           - output     (optional) - the output next to each checkbox
  *           - assign     (optional) - assign the output as an array to this variable
  * Examples:
  * <pre>

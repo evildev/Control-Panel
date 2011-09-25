@@ -5,9 +5,9 @@ ob_start ();
 $id = escs($_COOKIE['ecpid']);
 $now = time();
 
-if ($_GET["reason"]) { $sql = $db->Query("INSERT " . prefix_cpmin . "log (member_id, target_id, date, action, what, module ) VALUES ('0', '$USERID', '$now', '10', 'User ( " . $_GET["reason"] . " )', 'logout')"); } else { $sql = $db->Query("INSERT " . prefix_cpmin . "log (member_id, target_id, date, action, what, module ) VALUES ('$USERID', '$USERID', '$now', '10', 'Webinterface', 'logout')"); }
+if ($_GET["reason"]) { $sql = $db->Query("INSERT " . prefix_nexmin . "log (member_id, target_id, date, action, what, module ) VALUES ('0', '$USERID', '$now', '10', 'User ( " . $_GET["reason"] . " )', 'logout')"); } else { $sql = $db->Query("INSERT " . prefix_nexmin . "log (member_id, target_id, date, action, what, module ) VALUES ('$USERID', '$USERID', '$now', '10', 'Webinterface', 'logout')"); }
 
-$sql = $db->Query("UPDATE " . prefix_cpmin . "members SET loggedin = '0' WHERE id ='$id'");
+$sql = $db->Query("UPDATE " . prefix_nexmin . "members SET loggedin = '0' WHERE id ='$id'");
 
 if ($_GET["reason"] ? $reason = $_GET["reason"] : $reason = "user" );
  

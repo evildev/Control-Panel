@@ -29,13 +29,13 @@ if ($act == "delete") {
 	$id = $_GET["id"];
 	
 	
-	$sql = $db->Query("DELETE FROM " . prefix_cpmin . "voiceserver_master WHERE id = '$id'");
+	$sql = $db->Query("DELETE FROM " . prefix_nexmin . "voiceserver_master WHERE id = '$id'");
 	
 	$delete = TRUE;
 	
 	$now = time();
 	
-	$sql = $db->Query("INSERT " . prefix_cpmin . "log (member_id, target_id, date, action, what, module ) VALUES ('$USERID', '$id', '$now', '2', 'Voiceserver Master', 'voiceserver_master')");
+	$sql = $db->Query("INSERT " . prefix_nexmin . "log (member_id, target_id, date, action, what, module ) VALUES ('$USERID', '$id', '$now', '2', 'Voiceserver Master', 'voiceserver_master')");
 	
 	
 	}
@@ -50,18 +50,18 @@ if ($act == "do-savedata") {
 	$spasswd = $_POST["spasswd"];
 	$typ = $_POST["typ"];
 	
-	$sql_sl = $db->Query("SELECT * FROM " . prefix_cpmin . "rootserver WHERE id = '$rootserverid'");
+	$sql_sl = $db->Query("SELECT * FROM " . prefix_nexmin . "rootserver WHERE id = '$rootserverid'");
 	$result = $sql_sl->fetchrow();
 	
 	$serverip = $result->serverip;
 		
 		
-	$sql = $db->Query("INSERT " . prefix_cpmin . "voiceserver_master (rootserverid, serverip, tcpport, httpport, sadmin, spasswd, typ ) VALUES ('$rootserverid', '$serverip', '$tcpport', '$httpport', '$sadmin', '$spasswd', '$typ')");
+	$sql = $db->Query("INSERT " . prefix_nexmin . "voiceserver_master (rootserverid, serverip, tcpport, httpport, sadmin, spasswd, typ ) VALUES ('$rootserverid', '$serverip', '$tcpport', '$httpport', '$sadmin', '$spasswd', '$typ')");
 	
 	
 	$now = time();
 	
-	$sql = $db->Query("INSERT " . prefix_cpmin . "log (member_id, target_id, date, action, what, module ) VALUES ('$USERID', '" . mysql_insert_id() . "', '$now', '1', 'Voiceserver Master', 'voiceserver_master')");
+	$sql = $db->Query("INSERT " . prefix_nexmin . "log (member_id, target_id, date, action, what, module ) VALUES ('$USERID', '" . mysql_insert_id() . "', '$now', '1', 'Voiceserver Master', 'voiceserver_master')");
 	
 	
 	$saveok = TRUE;
@@ -83,7 +83,7 @@ if ($act == "do-savedata-voiceserver") {
 		
 	}
 	
-	$sql_sl = $db->Query("SELECT * FROM " . prefix_cpmin . "voiceserver_master WHERE id = '$voiceservermasterid'");
+	$sql_sl = $db->Query("SELECT * FROM " . prefix_nexmin . "voiceserver_master WHERE id = '$voiceservermasterid'");
 	$result = $sql_sl->fetchrow();
 	
 	$serverip = $result->serverip;
@@ -95,7 +95,7 @@ if ($act == "do-savedata-voiceserver") {
 	
 	// Freien Master-Voiceserver suchen
 	
-	$sql_vo = $db->Query("SELECT * FROM " . prefix_cpmin . "voiceserver_master WHERE typ = 'TS3' AND active = '1'");
+	$sql_vo = $db->Query("SELECT * FROM " . prefix_nexmin . "voiceserver_master WHERE typ = 'TS3' AND active = '1'");
 	$num = $sql_vo->numrows();
 
 	$vo_array = array();
@@ -153,7 +153,7 @@ if ($act == "do-savedata-voiceserver") {
 		
 	$now = time();
 	
-	$sql = $db->Query("INSERT " . prefix_cpmin . "log (member_id, target_id, date, action, what, module ) VALUES ('0', '" . mysql_insert_id() . "', '$now', '1', 'Voiceserver', 'order')");
+	$sql = $db->Query("INSERT " . prefix_nexmin . "log (member_id, target_id, date, action, what, module ) VALUES ('0', '" . mysql_insert_id() . "', '$now', '1', 'Voiceserver', 'order')");
 	
 	
 	
@@ -173,7 +173,7 @@ if ($act == "do-savedata-voiceserver") {
 	
 // Benötigte Datensätze auslesen
 
-	$sql_mv = $db->Query("SELECT * FROM " . prefix_cpmin . "voiceserver_master ORDER BY typ DESC, tcpport ASC");
+	$sql_mv = $db->Query("SELECT * FROM " . prefix_nexmin . "voiceserver_master ORDER BY typ DESC, tcpport ASC");
 	$num = $sql_mv->numrows();
 
 	$mv_array = array();
@@ -246,7 +246,7 @@ if ($act == "do-savedata-voiceserver") {
 	} 
 	
 	
-	$sql_rs = $db->Query("SELECT * FROM " . prefix_cpmin . "rootserver WHERE typ = 1 ORDER BY id ASC");
+	$sql_rs = $db->Query("SELECT * FROM " . prefix_nexmin . "rootserver WHERE typ = 1 ORDER BY id ASC");
 	$num = $sql_rs->numrows();
 
 	$rs_array = array();

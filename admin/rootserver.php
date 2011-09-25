@@ -26,14 +26,14 @@ if ($act == "delete") {
 	$id = $_GET["id"];
 	
 	
-	$sql = $db->Query("DELETE FROM " . prefix_cpmin . "rootserver WHERE id = '$id'");
+	$sql = $db->Query("DELETE FROM " . prefix_nexmin . "rootserver WHERE id = '$id'");
 	
 	$delete = TRUE;
 	
 	
 	$now = time();
 	
-	$sql = $db->Query("INSERT " . prefix_cpmin . "log (member_id, target_id, date, action, what, module ) VALUES ('$USERID', '" . mysql_insert_id() . "', '$now', '2', 'Rootserver', 'rootserver')");
+	$sql = $db->Query("INSERT " . prefix_nexmin . "log (member_id, target_id, date, action, what, module ) VALUES ('$USERID', '" . mysql_insert_id() . "', '$now', '2', 'Rootserver', 'rootserver')");
 	
 	
 	}
@@ -53,12 +53,12 @@ if ($act == "do-savedata") {
 	$traffic = $_POST["traffic"];
 	
 	
-	$sql = $db->Query("INSERT " . prefix_cpmin . "rootserver (name, serverip, typ, sname, spasswd, cpu, cpuinfo, ram, board, hddisk, traffic ) VALUES ('$name', '$serverip', '$typ', '$sname', '$spasswd', '$cpu', '$cpuinfo', '$ram', '$board', '$hddisk', '$traffic')");
+	$sql = $db->Query("INSERT " . prefix_nexmin . "rootserver (name, serverip, typ, sname, spasswd, cpu, cpuinfo, ram, board, hddisk, traffic ) VALUES ('$name', '$serverip', '$typ', '$sname', '$spasswd', '$cpu', '$cpuinfo', '$ram', '$board', '$hddisk', '$traffic')");
 	
 	
 	$now = time();
 	
-	$sql = $db->Query("INSERT " . prefix_cpmin . "log (member_id, target_id, date, action, what, module ) VALUES ('$USERID', '" . mysql_insert_id() . "', '$now', '1', 'Rootserver', 'rootserver')");
+	$sql = $db->Query("INSERT " . prefix_nexmin . "log (member_id, target_id, date, action, what, module ) VALUES ('$USERID', '" . mysql_insert_id() . "', '$now', '1', 'Rootserver', 'rootserver')");
 	
 	
 	$saveok = TRUE;
@@ -70,7 +70,7 @@ if ($act == "do-savedata") {
 	
 // Benötigte Datensätze auslesen
 
-	$sql_rs = $db->Query("SELECT * FROM " . prefix_cpmin . "rootserver ORDER BY id ASC");
+	$sql_rs = $db->Query("SELECT * FROM " . prefix_nexmin . "rootserver ORDER BY id ASC");
 	$num = $sql_rs->numrows();
 
 	$rs_array = array();

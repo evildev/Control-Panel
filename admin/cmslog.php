@@ -16,11 +16,11 @@ if (isset($act)) {
 
 	if ($act == "delete") {
 	
-	$sql = $db->Query("TRUNCATE " . prefix_cpmin . "log");
+	$sql = $db->Query("TRUNCATE " . prefix_nexmin . "log");
 	$delete = TRUE;
 	
 	$now = time();
-	$sql = $db->Query("INSERT " . prefix_cpmin . "log (member_id, target_id, date, action, what, module ) VALUES ('$USERID', '0', '$now', '2', 'CMS-Log', 'cmslog')");
+	$sql = $db->Query("INSERT " . prefix_nexmin . "log (member_id, target_id, date, action, what, module ) VALUES ('$USERID', '0', '$now', '2', 'CMS-Log', 'cmslog')");
 	
 	}
 	
@@ -28,7 +28,7 @@ if (isset($act)) {
 	
 // Benötigte Datensätze auslesen
 
-	$sql_log = $db->Query("SELECT * FROM " . prefix_cpmin . "log");
+	$sql_log = $db->Query("SELECT * FROM " . prefix_nexmin . "log");
 	$num = $sql_log->numrows();
 	
 	
@@ -37,7 +37,7 @@ if (isset($act)) {
 	$start = prepage() * $limit - $limit;
 	
 	
-	$sql_log = $db->Query("SELECT * FROM " . prefix_cpmin . "log ORDER BY date DESC LIMIT $start,$limit");
+	$sql_log = $db->Query("SELECT * FROM " . prefix_nexmin . "log ORDER BY date DESC LIMIT $start,$limit");
 	$num = $sql_log->numrows();
 
 	$log_array = array();
@@ -54,7 +54,7 @@ if (isset($act)) {
 	
 	$a = $a + 1;
 	
-	$sql = $db->Query("SELECT * FROM " . prefix_cpmin . "members WHERE id = '$row->member_id' LIMIT 1");
+	$sql = $db->Query("SELECT * FROM " . prefix_nexmin . "members WHERE id = '$row->member_id' LIMIT 1");
 	$result = $sql->fetchrow();
 	
 	$name = $result->name;

@@ -26,7 +26,7 @@
 //	Die auf evilDEV.de - oder Partnerseiten - heruntergeladene Software
 //	darf nicht auf einer anderen - nicht autentifizierten Internetpräsenz -
 //	zum Download angeboten werden. Der Download darf mit Verlinkung auf die
-//	Internetpräsenz http://www.evilDEV.de/ angeboten
+//	Internetpräsenz http://www.evilDEV.de/download/ angeboten
 //	werden.
 //
 
@@ -58,8 +58,8 @@
 2. Installation
 
 	
-	2.1 Erstelle eine Datenbank und imprtiere die SQL-Datei - eviladmin.sql -
-	2.2 Lade alle Daten im eviladmin-Order auf den Webserver
+	2.1 Erstelle eine Datenbank und imprtiere die SQL-Datei - ts3admin.sql -
+	2.2 Lade alle Daten im ts3admin-Order auf den Webserver
 	2.3 Editiere die Datenbank-Einstellungen in der Datei /backend/inc/constant.php
 	2.4 Setze die Rechte der folgenden Order auf 0777
 		
@@ -89,8 +89,8 @@
 	4.1 Um Support zu erhalten ist eine Registration auf http://www.evilDEV.de/registration notwendig ( Die Registration ist vollkommen kostenlos! )
 	4.2 Nach der Registrierung kannst du Gebrauch von folgenden Supportmöglichkeiten machen
 
-		4.2.1 Forum ( http://www.evilDEV.de )
-		4.2.2 E-Mail ( fs@evilDEV.de )
+		4.2.1 Forum ( http://www.evilDEV.de/forum )
+		4.2.2 E-Mail ( fs@nex-network.de )
 		4.2.3 ICQ ( 205 - 592 - 530 )
 
 

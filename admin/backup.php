@@ -29,7 +29,7 @@ if (isset($act)) {
 		$id = $_GET["id"];
 	
 	
-		$sql = $db->Query("SELECT * FROM " . prefix_cpmin . "backup WHERE id = '$id' LIMIT 1");
+		$sql = $db->Query("SELECT * FROM " . prefix_nexmin . "backup WHERE id = '$id' LIMIT 1");
 		$result = $sql->fetchrow();
 	
 		$file = $result->file;
@@ -39,13 +39,13 @@ if (isset($act)) {
 		rmdir("../uploads/backup/$path");
 
 	
-		$sql = $db->Query("DELETE FROM " . prefix_cpmin . "backup WHERE id = '$id'");
+		$sql = $db->Query("DELETE FROM " . prefix_nexmin . "backup WHERE id = '$id'");
 	
 		$delete = TRUE;
 	
 		$now = time();
 	
-		$sql = $db->Query("INSERT " . prefix_cpmin . "log (member_id, target_id, date, action, what, module ) VALUES ('$USERID', '$id', '$now', '2', 'MySQL-Backup', 'backup')");
+		$sql = $db->Query("INSERT " . prefix_nexmin . "log (member_id, target_id, date, action, what, module ) VALUES ('$USERID', '$id', '$now', '2', 'MySQL-Backup', 'backup')");
 	
 	
 	}
@@ -78,7 +78,7 @@ if (isset($act)) {
 		system('/usr/bin/mysqldump -u'.$username.' -p'.$passwort.' -h localhost '.$db_name.' | /bin/gzip > ' . $path . '/' . $filename . '.sql.gz', $fp);
 		if ($fp==0) echo ''; else echo 'Es ist ein Fehler aufgetreten';
 		$filename_n = $path.'/'.$filename.'.sql.gz';
-		$Header = "From: evilADMIN - System <$mail>";
+		$Header = "From: ECPmin - System <$mail>";
 		$Trenner = md5(uniqid(time()));
 		$Header .= "\n";
 		$Header .= "MIME-Version: 1.0";
@@ -115,7 +115,7 @@ if (isset($act)) {
 		
 		$now = time();
 		
-		$sql = $db->Query("INSERT " . prefix_cpmin . "backup (typ, date, file, path, filesize ) VALUES ('1', '$now', '$filename', '$path_sufix', '$filesize')");
+		$sql = $db->Query("INSERT " . prefix_nexmin . "backup (typ, date, file, path, filesize ) VALUES ('1', '$now', '$filename', '$path_sufix', '$filesize')");
 		
 		
 		$msg_backup = TRUE;
@@ -123,14 +123,14 @@ if (isset($act)) {
 	
 		$now = time();
 	
-		$sql = $db->Query("INSERT " . prefix_cpmin . "log (member_id, target_id, date, action, what, module ) VALUES ('$USERID', '0', '$now', '7', 'MySQL Backup', 'backup')");
+		$sql = $db->Query("INSERT " . prefix_nexmin . "log (member_id, target_id, date, action, what, module ) VALUES ('$USERID', '0', '$now', '7', 'MySQL Backup', 'backup')");
 	
 	}
 	
 	
 }
 	// Benötigte Datensätze auslesen
-	$sql_log = $db->Query("SELECT * FROM " . prefix_cpmin . "backup ORDER BY date DESC");
+	$sql_log = $db->Query("SELECT * FROM " . prefix_nexmin . "backup ORDER BY date DESC");
 	$num = $sql_log->numrows();
 	
 	
@@ -138,7 +138,7 @@ if (isset($act)) {
 	$seiten = ceil($num / $limit);
 	$start = prepage() * $limit - $limit;
 	
-	$sql_bak = $db->Query("SELECT * FROM " . prefix_cpmin . "backup ORDER BY date DESC LIMIT $start,$limit");
+	$sql_bak = $db->Query("SELECT * FROM " . prefix_nexmin . "backup ORDER BY date DESC LIMIT $start,$limit");
 	$num = $sql_bak->numrows();
 
 	$bak_array = array();

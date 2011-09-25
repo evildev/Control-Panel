@@ -32,7 +32,7 @@ if (isset($act)) {
 		
 		$mid = $_GET['mid'];
 		
-		$sql = $db->Query("SELECT * FROM " . prefix_cpmin . "voiceserver_master WHERE id = '$mid'");
+		$sql = $db->Query("SELECT * FROM " . prefix_nexmin . "voiceserver_master WHERE id = '$mid'");
 		$result = $sql->fetchrow();
 	
 		$sadmin = $result->sadmin;
@@ -125,7 +125,7 @@ if (isset($act)) {
 		$mid = $_GET['mid'];
 		$message = $_POST['message'];
 	
-		$sql = $db->Query("SELECT * FROM " . prefix_cpmin . "voiceserver_master WHERE id = '$mid'");
+		$sql = $db->Query("SELECT * FROM " . prefix_nexmin . "voiceserver_master WHERE id = '$mid'");
 		$result = $sql->fetchrow();
 	
 		$sadmin = $result->sadmin;
@@ -157,7 +157,7 @@ if ($do == "server-start") {
 	$sid = $_REQUEST["sid"]; 
 	
 	
-	$sql_sl = $db->Query("SELECT * FROM " . prefix_cpmin . "voiceserver WHERE id = '$sid'");
+	$sql_sl = $db->Query("SELECT * FROM " . prefix_nexmin . "voiceserver WHERE id = '$sid'");
 	$result = $sql_sl->fetchrow();
 	
 	$id = $result->id;
@@ -168,7 +168,7 @@ if ($do == "server-start") {
 	$typ = $result->typ;
 	$masterid = $result->masterid;
 	
-	$sql = $db->Query("SELECT * FROM " . prefix_cpmin . "voiceserver_master WHERE id = '$masterid'");
+	$sql = $db->Query("SELECT * FROM " . prefix_nexmin . "voiceserver_master WHERE id = '$masterid'");
 	$result = $sql->fetchrow();
 	
 	$sadmin = $result->sadmin;
@@ -202,7 +202,7 @@ if ($do == "server-start") {
 	
 		$now = time();
 	
-		$sql = $db->Query("INSERT " . prefix_cpmin . "log (member_id, target_id, date, action, what, module ) VALUES ('$USERID', '$sid', '$now', '7', 'Voiceserver', 'customer')");
+		$sql = $db->Query("INSERT " . prefix_nexmin . "log (member_id, target_id, date, action, what, module ) VALUES ('$USERID', '$sid', '$now', '7', 'Voiceserver', 'customer')");
 	
 	
 		$tmpl->assign("start", $start);
@@ -217,7 +217,7 @@ if ($do == "server-stop") {
 	$mid = $_REQUEST["mid"];
 		
 	
-	$sql_sl = $db->Query("SELECT * FROM " . prefix_cpmin . "voiceserver_master WHERE id = '$mid'");
+	$sql_sl = $db->Query("SELECT * FROM " . prefix_nexmin . "voiceserver_master WHERE id = '$mid'");
 	$result = $sql_sl->fetchrow();
 	
 	$serverip = $result->serverip;
@@ -254,7 +254,7 @@ if ($do == "server-stop") {
 	
 		$now = time();
 	
-		$sql = $db->Query("INSERT " . prefix_cpmin . "log (member_id, target_id, date, action, what, module ) VALUES ('$USERID', '$id', '$now', '8', 'Voiceserver', 'customer')");
+		$sql = $db->Query("INSERT " . prefix_nexmin . "log (member_id, target_id, date, action, what, module ) VALUES ('$USERID', '$id', '$now', '8', 'Voiceserver', 'customer')");
 	
 	
 		$tmpl->assign("stopok", $stopok);
@@ -273,7 +273,7 @@ if ($act == "monitor") {
 	$mid = $_REQUEST["mid"];
 		
 	
-	$sql_sl = $db->Query("SELECT * FROM " . prefix_cpmin . "voiceserver_master WHERE id = '$mid'");
+	$sql_sl = $db->Query("SELECT * FROM " . prefix_nexmin . "voiceserver_master WHERE id = '$mid'");
 	$result = $sql_sl->fetchrow();
 	
 	$serverip = $result->serverip;
@@ -303,8 +303,8 @@ if ($act == "monitor") {
 	
 	if (isset($_GET["id"])) {
 	
-		$sql = $db->Query("DELETE FROM " . prefix_cpmin . "members_product WHERE memberid = '$id' AND udpport = '$udpport' LIMIT 1");
-		$sql = $db->Query("DELETE FROM " . prefix_cpmin . "voiceserver WHERE memberid = '$id' AND udpport = '$udpport' LIMIT 1");
+		$sql = $db->Query("DELETE FROM " . prefix_nexmin . "members_product WHERE memberid = '$id' AND udpport = '$udpport' LIMIT 1");
+		$sql = $db->Query("DELETE FROM " . prefix_nexmin . "voiceserver WHERE memberid = '$id' AND udpport = '$udpport' LIMIT 1");
 	
 	}
 	
@@ -312,7 +312,7 @@ if ($act == "monitor") {
 	
 	$now = time();
 	
-	$sql = $db->Query("INSERT " . prefix_cpmin . "log (member_id, target_id, date, action, what, module ) VALUES ('$USERID', '$server_dbid', '$now', '2', 'Voiceserver', 'ts3monitor')");
+	$sql = $db->Query("INSERT " . prefix_nexmin . "log (member_id, target_id, date, action, what, module ) VALUES ('$USERID', '$server_dbid', '$now', '2', 'Voiceserver', 'ts3monitor')");
 	
 	
 	}
@@ -320,7 +320,7 @@ if ($act == "monitor") {
 	$mid = $_REQUEST["mid"];
 	
 	
-	$sql_cu = $db->Query("SELECT * FROM " . prefix_cpmin . "voiceserver_master WHERE id = $mid");
+	$sql_cu = $db->Query("SELECT * FROM " . prefix_nexmin . "voiceserver_master WHERE id = $mid");
 	$result = $sql_cu->fetchrow();
 	
 	$id = $result->id;
@@ -374,7 +374,7 @@ if ($act == "monitor") {
 		
 		$filetraffic = $virtualserver_total_bytes_downloaded + $virtualserver_total_bytes_uploaded;
 		
-		$sql = $db->Query("SELECT * FROM " . prefix_cpmin . "voiceserver WHERE serverip = '$serverip' AND masterid = '$mid' AND udpport = '" . $server["virtualserver_port"] . "' AND tcpport = '" . $tcpport . "'");
+		$sql = $db->Query("SELECT * FROM " . prefix_nexmin . "voiceserver WHERE serverip = '$serverip' AND masterid = '$mid' AND udpport = '" . $server["virtualserver_port"] . "' AND tcpport = '" . $tcpport . "'");
 		$result = $sql->fetchrow();
 
 		$sid = $result->id;
@@ -447,7 +447,7 @@ if ($act == "monitor") {
 
 // Benötigte Datensätze auslesen
 
-	$sql_vm = $db->Query("SELECT * FROM " . prefix_cpmin . "voiceserver_master WHERE typ = 'TS3' ORDER BY id ASC");
+	$sql_vm = $db->Query("SELECT * FROM " . prefix_nexmin . "voiceserver_master WHERE typ = 'TS3' ORDER BY id ASC");
 	$num = $sql_vm->numrows();
 
 	$vm_array = array();
