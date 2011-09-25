@@ -1,0 +1,248 @@
+.theader {
+	margin: 0 0 0 0;
+	position: relative;
+	border:0;
+	border-width:0;
+}
+
+/* Content Links */
+
+.links .theader .bg .content {
+	padding-left: 0px;
+	padding-right: 0px;
+	padding-top: 0px;
+	padding-bottom: 20px;
+	height: max-height;
+	border:0;
+	border-width:0;
+}
+
+/* Content Rechts */
+
+.links .theader .bg .menu {	
+	background-image: url(../images/navi_bg_cat.jpg);
+	height: 18px;
+	width: 119px;
+	padding-left: 10px;
+	vertical-align: text-bottom;
+    color: #000;
+	padding-top: 3px;
+	border: 0;
+	border-width: 0px;
+	border-right: 1;
+	border-right-width: 1px;
+	border-left: 1;
+	border-left-width: 1px;
+	border-color: #000;
+	border-style:solid;
+}
+
+.links .theader .bg .menu_last {
+	background-color: #FFFFFF;
+	height: 18px;
+	width: 119px;
+	padding-left: 10px;
+	vertical-align: text-bottom;
+    color: #000;
+	padding-top: 3px;
+	border: 0;
+	border-width: 0px;
+	border-right: 1;
+	border-right-width: 1px;
+	border-left: 1;
+	border-left-width: 1px;
+	border-bottom: 1;
+	border-bottom-width: 1px;
+	border-color: #000;
+	border-style:solid;
+}
+
+
+.links .theader .bg .menu_kategorie_green {
+	background-color: #E7F3F7;
+	height: 18px;
+	width: 119px;
+	padding-left: 10px;
+	vertical-align:middle;
+    color: #000;
+	padding-top: 3px;
+	border: 0;
+	border-width: 0px;
+	border-right: 1;
+	border-right-width: 1px;
+	border-left: 1;
+	border-left-width: 1px;
+	border-bottom: 0;
+	border-bottom-width: 0px;
+	border-color: #000;	
+	border-style:solid;
+	font-weight:bold;
+}
+
+.links .theader .bg .menu_title {
+	background-repeat: repeat-x;
+	background-color: #FFFFFF;
+	height: 18px;
+	width: 119px;
+	padding-left: 10px;
+	vertical-align: text-bottom;
+    color: #000;
+	padding-top: 3px;
+	border-right: 1;
+	border-right-width: 1px;
+	border-left: 1;
+	border-left-width: 1px;
+	border-top: 1;
+	border-top-width: 1px;
+	border-color: #000;
+	border-style:solid;
+	font-weight: bold;
+	border-bottom: 1;
+	border-bottom-width: 1px;
+	border-bottom-style: dashed;
+}
+
+
+.links .theader .bg .menu_ip {
+	background-repeat: repeat-x;
+	background-color: #FFFFFF;
+	height: 18px;
+	width: 129px;
+	text-align: center;
+	vertical-align: text-bottom;
+    color: #000;
+	padding-top: 3px;
+	border-right: 1;
+	border-right-width: 1px;
+	border-left: 1;
+	border-left-width: 1px;
+	border-top: 0;
+	border-top-width: 0px;
+	border-bottom: 0;
+	border-bottom-width: 0px;
+	border-color: #000;
+	border-style:solid;
+	
+}
+
+/* Content-Boxen */
+
+.theader .contentspacer {
+	height: 5px;
+	clear: both;
+}
+
+.theader .clear {
+	clear: both;
+	width: 0px;
+	height: 1px;
+	font-size: 0em;
+	overflow: hidden;
+}
+
+.theader .contentbox {
+	margin: 0;
+	padding: 0;
+	width: 744;
+	clear: both;
+	border:1;
+	border-width:1px;
+	border-style:solid;
+	vertical-align:top;
+	border-color:#000000;
+}
+
+.theader .contentbox .contenthead {
+	background-image: url(../images/content_head.jpg);
+	text-align: justify;
+	font-weight: bold;
+	color:#000000;
+	padding: 0px;
+	padding-left: 10px;	
+	border: 0;
+	border-width: 0px;
+	border-bottom: 1;
+	border-bottom-width: 1px;
+	border-style: dashed;
+
+}
+
+.theader .contentbox .contenttext {
+	text-align: justify;
+	color: #232323;
+	padding: 10px;
+	padding-top: 12px;
+}
+
+.theader .contentbox .left {
+	text-align: justify;
+	color: #232323;
+	padding: 0px;
+	padding-top: 30px;
+	padding-left: 0px;
+	padding-right: 0px;
+	border: 0;
+	border-width: 0px;
+	padding-bottom: 75px;
+	height: 100%;
+	width: 160px;
+}
+
+.theader .contentbox .right {
+	border: 0;
+	border-width: 0px;
+	border-color: #d4d4d4; 
+	border-left: 1; 
+	border-left-width: 1px; 
+	border-style: solid;
+	padding: 20px;
+	padding-top: 14px;
+    min-height: 190px;
+	height: auto !important;
+	height: 190px;
+	white-space: pre-wrap;
+	width: 650px;
+
+}
+
+.theader .contentbox .contenttable {
+	text-align: justify;
+	border: 1;
+	border-color: #d4d4d4;
+	border-width: 0px;
+	border-bottom-width: 1px;
+	border-style: solid;
+	background-color: #DBDBDB;
+	padding: 2px;
+	padding-top: 3px;
+	padding-left: 17px;
+
+	padding-right: 17px;
+}
+
+.theader .contentbox .contentfoot {
+    border:1;
+	border-width:1;
+	border-style:solid;
+	vertical-align:top;
+	border-color:#000000;
+	background-color:#191309;
+	height: 20px;
+}
+
+.theader img {
+	border: none;
+}
+
+/* Ausrichtungen */ 
+
+.clinks {
+	float:left;
+	width: 277px;
+	text-align:left;
+}
+
+.crechts {
+	float:right;
+	width: 277px;
+}
