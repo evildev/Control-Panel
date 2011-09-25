@@ -96,7 +96,7 @@ foreach ($cp_lang as $key => $val) {
 define("prefix", $db_prefix);
 define("prefix_cpmin", $db_prefix_cpmin);
 
-$footer = "<a class=\"copyright\" href=\"http://www.cp-network.de/content/cms/\">NEXmin by NEX-network.de</a>";
+$footer = "<a class=\"copyright\" href=\"http://www.evilDEV.de/content/cms/\">NEXmin by evilDEV.de</a>";
 
 
 if (isset($_COOKIE['ecpid']) && $_COOKIE['ecpid'] != '')

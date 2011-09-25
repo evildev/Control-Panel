@@ -200,7 +200,7 @@ CREATE TABLE `eviladmin_settings` (
 -- Daten für Tabelle `eviladmin_settings`
 -- 
 
-INSERT INTO `eviladmin_settings` (`id`, `sitename`, `url`, `infoemail`, `firma`, `name`, `street`, `city`, `zipcode`, `country`, `taxnumber`, `phone`, `prefix_firma`, `maintenance`, `theme`, `lang`, `session_timeout`, `version`) VALUES (1, 'teamspeak3.de - connect to the real world! - Teamspeak Server für dich!', 'teamspeak3.de', 'info@tld.de', 'NEX-network.de', '', '', '', '', 'DE', '', '', 'NEX', '0', 'eCP', 'de', '180', '0.9e');
+INSERT INTO `eviladmin_settings` (`id`, `sitename`, `url`, `infoemail`, `firma`, `name`, `street`, `city`, `zipcode`, `country`, `taxnumber`, `phone`, `prefix_firma`, `maintenance`, `theme`, `lang`, `session_timeout`, `version`) VALUES (1, 'teamspeak3.de - connect to the real world! - Teamspeak Server für dich!', 'teamspeak3.de', 'info@tld.de', 'evilDEV.de', '', '', '', '', 'DE', '', '', 'NEX', '0', 'eCP', 'de', '180', '0.9e');
 
 -- --------------------------------------------------------
 

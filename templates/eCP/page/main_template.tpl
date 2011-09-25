@@ -6,11 +6,11 @@
 <meta http-equiv="pragma" content="no-cache" />
 <meta http-equiv="imagetoolbar" content="no" />
 <meta name="Author" content="Florian Schroeder" />
-<meta name="Copyright" content="Copyright 2010 by NEX-network.de" />
+<meta name="Copyright" content="Copyright 2010 by evilDEV.de" />
 <meta name="Description" content="Teamspeak 3 Server Webinterface" />
 <meta name="Keywords" content="Teamspeak 3 Server Webinterface" />
 <meta name="Robots" content="INDEX,FOLLOW" />
-<meta name="Generator" content="NEXmin.v{$SITE_VERSION} - Copyright (C) 2010 NEX-network.de. All rights reserved." />
+<meta name="Generator" content="NEXmin.v{$SITE_VERSION} - Copyright (C) 2010 evilDEV.de. All rights reserved." />
 <meta name="Language" content="de" />
 <link type="image/x-icon" rel="icon" href="favicon.ico" />
 <link type="text/css" rel="stylesheet" href="templates/{$theme}/css/header.css" />
@@ -69,7 +69,7 @@
         <div class="clear" style="background-color:#FFFFFF;">&nbsp;</div>
         <div class="info"><a href="http://{$SITE_URL}">Server hosted by {$SITE_FIRMA}</a></div>
         <!-- Das nachfolgende Copyright darf laut Lizenzvereinbarung nicht entfernt oder verändert werden! -->
-        <div class="info"><a href="http://www.eviladmin.de/">Copyright &copy; 2010 NEX-network.de</a></div>
+        <div class="info"><a href="http://www.evilDEV.de/">Copyright &copy; 2010 evilDEV.de</a></div>
         <div id="maincontent_bottom" class="maincontent_bottom">&nbsp;</div>
       </div>
     </div>

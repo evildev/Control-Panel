@@ -9,12 +9,12 @@
 <meta http-equiv="pragma" content="no-cache" />
 <meta http-equiv="imagetoolbar" content="no" />
 <meta name="Author" content="Florian Schroeder" />
-<meta name="Copyright" content="Copyright 2010 by NEX-network.de" />
+<meta name="Copyright" content="Copyright 2010 by evilDEV.de" />
 <meta name="Description" content="Teamspeak 3 Server Webinterface" />
 <meta name="Keywords" content="Teamspeak 3 Server Webinterface" />
 <meta name="Robots" content="INDEX,FOLLOW" />
 <meta name="Generator" content="NEXmin.v<?php echo $this->_tpl_vars['SITE_VERSION']; ?>
- - Copyright (C) 2010 NEX-network.de. All rights reserved." />
+ - Copyright (C) 2010 evilDEV.de. All rights reserved." />
 <meta name="Language" content="de" />
 <link type="image/x-icon" rel="icon" href="favicon.ico" />
 <link type="text/css" rel="stylesheet" href="templates/<?php echo $this->_tpl_vars['theme']; ?>
@@ -82,7 +82,7 @@
 ">Server hosted by <?php echo $this->_tpl_vars['SITE_FIRMA']; ?>
 </a></div>
         <!-- Das nachfolgende Copyright darf laut Lizenzvereinbarung nicht entfernt oder verändert werden! -->
-        <div class="info"><a href="http://www.cp-network.de">Copyright &copy; 2010 NEX-network.de</a></div>
+        <div class="info"><a href="http://www.evilDEV.de">Copyright &copy; 2010 evilDEV.de</a></div>
         <div id="maincontent_bottom" class="maincontent_bottom">&nbsp;</div>
       </div>
     </div>
