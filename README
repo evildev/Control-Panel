@@ -1,0 +1,97 @@
+
+// README
+
+// Info:
+//
+/*
+
+	evilInterface Copyright (C) 2011 evilDEV.de
+
+	This program is free software: you can redistribute it and/or modify
+	it under the terms of the GNU General Public License as published by
+	the Free Software Foundation, either version 3 of the License, or
+	(at your option) any later version.
+
+	This program is distributed in the hope that it will be useful,
+	but WITHOUT ANY WARRANTY; without even the implied warranty of
+	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+	GNU General Public License for more details.
+
+	You should have received a copy of the GNU General Public License
+	along with this program.  If not, see <http://www.gnu.org/licenses/>.
+	
+*/
+
+//
+//	Die auf NEX-network.de - oder Partnerseiten - heruntergeladene Software
+//	darf nicht auf einer anderen - nicht autentifizierten Internetpräsenz -
+//	zum Download angeboten werden. Der Download darf mit Verlinkung auf die
+//	Internetpräsenz http://www.ts3admin.de/download/ angeboten
+//	werden.
+//
+
+
+
+1. Systemvoraussetzungen
+
+	
+	1.1 Benötigt
+
+		- PHP 4.0 oder höher
+		- 1x MySQL Datenbank
+		
+
+		1.1.1 php.ini
+
+			- magic_quotes_gpc = OFF
+			- magic_quotes_runtime = OFF
+			- magic_quotes_sybase = OFF
+
+		// Wenn die php.ini nicht bearbeitet werden kann, erstelle eine .htaccess und füge "php_flag magic_quotes_gpc Off" hinzu!
+
+
+	1.2 Empfehlenswert
+
+		- SAFE_MODE = OFF
+	
+
+2. Installation
+
+	
+	2.1 Erstelle eine Datenbank und imprtiere die SQL-Datei - ts3admin.sql -
+	2.2 Lade alle Daten im ts3admin-Order auf den Webserver
+	2.3 Editiere die Datenbank-Einstellungen in der Datei /backend/inc/constant.php
+	2.4 Setze die Rechte der folgenden Order auf 0777
+		
+		- /backend/temp
+		- /backend/temp/1
+		- /uploads/customer
+		- /uploads/backup
+
+	2.5 Füge die Webserver IP der query_ip_whitelist.txt hinzu
+	2.6 Nun kannst du dich mit dem Benutzer "admin" und dem Passwort "avatar3d" einloggen.
+
+
+3. Erste Schritte
+
+	
+	3.1 Gehe in den Adminbereich
+	3.2 Füge einen Rootserver hinzu
+	3.3 Füge nun eine Instanz unter dem Menüpunkt "Voiceserver" hinzu
+	3.4 Weise nun unter dem Menüpunkt "Voices. zuweisen" bestehende Server einem Benutzer zu
+	3.5 oder erstelle neue Server
+     !! 3.6 Ein virtueller Server kann erst über den Adminbereich administriert werden, sobald der Server einem Benutzer zugewiesen ist!!!
+	
+
+4. Support
+	
+
+	4.1 Um Support zu erhalten ist eine Registration auf http://www.ts3admin.de/registration notwendig ( Die Registration ist vollkommen kostenlos! )
+	4.2 Nach der Registrierung kannst du Gebrauch von folgenden Supportmöglichkeiten machen
+
+		4.2.1 Forum ( http://www.ts3admin.de/forum )
+		4.2.2 E-Mail ( fs@nex-network.de )
+		4.2.3 ICQ ( 205 - 592 - 530 )
+
+
+// Ende der Datei

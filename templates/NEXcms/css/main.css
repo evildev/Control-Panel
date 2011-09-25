@@ -1,0 +1,82 @@
+#eCP #main {
+	clear: both;
+	width: 900px;
+	background-color: #FFFFFF;
+}
+
+/* Folgende Anweisung gilt ausschließlich für den IE */
+
+* html #eCP #main {
+	clear: both;
+	width: 900px;
+	background-color: #FFFFFF;
+	margin-left: 0px;
+}
+
+/* Tatsaechlicher Content */
+
+#eCP .maincontent {
+	width: 900x;
+	float: left;
+	margin: 0px;
+	padding: 0px;
+	background-color: #FFFFFF;
+	background: url(../images/content_bg.jpg) repeat-y top center;
+}
+/* Module Startseite */
+
+
+#eCP .maincontent_bottom {
+	height: 18px; 
+	width: 900px;
+	background-image: url(../images/maincontent_bottom.jpg);
+	float: left;
+}
+
+
+#eCP .maincontent .module {
+	width: 900;
+	clear: both;
+	background-color: #FFFFFF;
+}
+#eCP .maincontent .module .links {
+	margin: 0px;
+	padding: 0px;
+	border:0;
+	border-width:0;
+	width: 140px;
+	float: left;
+	background: url(../images/links_bg.jpg) no-repeat top center;
+}
+#eCP .maincontent .module .mitte {
+	margin: 0px;
+	padding: 8px;
+	border:0;
+	border-width:0;
+    width: 590px;
+	float: left;
+	text-align: center;
+	background-color: #FFFFFF;
+}
+#eCP .maincontent .module .rechts {
+	margin: 0px;
+	padding: 0px;
+	border:0;
+	border-width:0;
+	width: 154px;
+	float: left;
+}
+
+
+/* Module Footer */
+
+#eCP .footer {
+	text-align: center;
+	height: 17px; 
+	width: 850px; 
+	float: left;
+	color: #5E5E5E;
+	font-size: 12px;
+	padding-top: 2px;
+	padding:25px;
+}

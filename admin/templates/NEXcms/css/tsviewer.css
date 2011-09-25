@@ -1,0 +1,154 @@
+.tsviewer{
+	width: 544px;
+	overflow: hidden;
+	position: relative;
+}
+.tsviewer_minimal{
+	width: 100px;
+	overflow: hidden;
+	position: relative;
+	float: left;
+	border: 1;
+	border-width: 1px;
+	border-style: dotted;
+	padding: 10px;
+	margin: 10px;
+	text-align: center;
+}
+.tsviewerleft{
+	width: 220px;
+	overflow: hidden;
+	position: relative;
+	float: left;
+	border: 1;
+	border-width: 1px;
+	border-style: dotted;
+	padding: 15px;
+	margin: 10px;
+	white-space:nowrap;
+}
+.tsviewerright{
+	width: 220px;
+	overflow: hidden;
+	position: relative;
+	float: left;
+	border: 1;
+	border-width: 1px;
+	border-style: dotted;
+	padding: 15px;
+	padding-top: 17px;
+	margin: 10px;
+}
+.tsviewer *{
+	font-family: Verdana;
+	font-size: 10px;
+	vertical-align: middle;
+}
+.tsviewer_minimal *{
+	font-family: Verdana;
+	font-size: 10px;
+	vertical-align: middle;
+}
+.tsviewererror{
+	font-family: Verdana;
+	font-size: 10px;
+	color: red;
+}
+.tsviewerservername{
+	height: 18px;
+	font-weight: bold;
+	width: 190px;
+}
+.tsviewerservername_minimal{
+	height: 18px;
+	font-weight: bold;
+	width: 100px;
+}
+.tsviewerserverlabel_bold_minimal{
+	height: 18px;
+	font-weight: bold;
+	width: 100px;
+	font-weight: bold;
+}
+.tsviewerserverdatabold{
+	height: 18px;
+	font-weight: bold;
+	width: 110px;
+	float:left;
+	padding-top: 4px;
+}
+.tsviewerserverdata{
+	height: 18px;
+	width: 110px;
+	float:left; 
+	padding-top: 4px;
+}
+.tsviewerserver_minimal{
+	height: 18px;
+	width: 100px;
+}
+.tsviewerfooter{
+	clear: both;
+	height: 18px;
+}
+
+.tsviewerfootername{
+	margin-left: 18px;
+}
+
+.tsviewerchannel{
+	clear: both;
+	height: 18px;
+}
+.tsviewerclient{
+	clear: both;
+	height: 18px;
+	right: 0;
+}
+.tsviewerstatus{
+	float: left;
+	height: 18px;
+}
+.tsviewerflags{
+	position: absolute;
+	right: 5px;
+	clear: right;
+	height: 18px;
+}
+.clear {
+	width: 0px;
+	height: 1px;
+	font-size: 0em;
+}
+.contentspacer {
+	height: 5px;
+	clear: both;
+}
+a.tsviewer_link{
+	text-decoration: none;
+	color: #000000;
+}
+a:hover.tsviewer_link{
+	text-decoration: none;
+	color: #E30074;
+}
+a.tsviewer_minimal_link{
+	text-decoration: none;
+	color: #E30074;
+}
+a:hover.tsviewer_minimal_link{
+	text-decoration: none;
+	color: #000000;
+}
+.tsviewer img{
+	margin-right: 0px;
+	border: 0;
+	border-width: 0px;
+	height: 18px;
+}
+.tsviewer_minimal img{
+	margin-right: 0px;
+	border: 0;
+	border-width: 0px;
+	height: 18px;
+}
