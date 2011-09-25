@@ -18,8 +18,8 @@
 	
 // MySQLkonstanten - Nur editieren, wenn man weiﬂ was man macht ;)
 
-	$db_prefix = "ts3admin_";
-	$db_prefix_cpmin = "ts3admin_";
+	$db_prefix = "eviladmin_";
+	$db_prefix_cpmin = "eviladmin_";
 	
 
 // Systemkonstanten - Nicht editieren!

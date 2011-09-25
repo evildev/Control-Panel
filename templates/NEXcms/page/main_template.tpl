@@ -69,7 +69,7 @@
         <div class="clear" style="background-color:#FFFFFF;">&nbsp;</div>
         <div class="info"><a href="http://{$SITE_URL}">Server hosted by {$SITE_FIRMA}</a></div>
         <!-- Das nachfolgende Copyright darf laut Lizenzvereinbarung nicht entfernt oder verändert werden! -->
-        <div class="info"><a href="http://www.ts3admin.de/">Copyright &copy; 2010 NEX-network.de</a></div>
+        <div class="info"><a href="http://www.eviladmin.de/">Copyright &copy; 2010 NEX-network.de</a></div>
         <div id="maincontent_bottom" class="maincontent_bottom">&nbsp;</div>
       </div>
     </div>

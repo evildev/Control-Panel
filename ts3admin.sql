@@ -1,9 +1,9 @@
 
 -- 
--- Tabellenstruktur für Tabelle `ts3admin_backup`
+-- Tabellenstruktur für Tabelle `eviladmin_backup`
 -- 
 
-CREATE TABLE `ts3admin_backup` (
+CREATE TABLE `eviladmin_backup` (
   `id` int(11) NOT NULL auto_increment,
   `typ` int(11) default NULL,
   `date` varchar(11) default NULL,
@@ -14,17 +14,17 @@ CREATE TABLE `ts3admin_backup` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- 
--- Daten für Tabelle `ts3admin_backup`
+-- Daten für Tabelle `eviladmin_backup`
 -- 
 
 
 -- --------------------------------------------------------
 
 -- 
--- Tabellenstruktur für Tabelle `ts3admin_container`
+-- Tabellenstruktur für Tabelle `eviladmin_container`
 -- 
 
-CREATE TABLE `ts3admin_container` (
+CREATE TABLE `eviladmin_container` (
   `id` smallint(3) unsigned NOT NULL default '0',
   `name` varchar(200) collate latin1_general_ci NOT NULL default '',
   `tpl` varchar(100) collate latin1_general_ci NOT NULL default 'standard_1',
@@ -35,10 +35,10 @@ CREATE TABLE `ts3admin_container` (
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci PACK_KEYS=0;
 
 -- 
--- Daten für Tabelle `ts3admin_container`
+-- Daten für Tabelle `eviladmin_container`
 -- 
 
-INSERT INTO `ts3admin_container` (`id`, `name`, `tpl`, `typ`, `area`) VALUES (10, 'forum', 'forum_template', 'out', 1),
+INSERT INTO `eviladmin_container` (`id`, `name`, `tpl`, `typ`, `area`) VALUES (10, 'forum', 'forum_template', 'out', 1),
 (12, 'main', 'main_template', 'out', 1),
 (13, 'misc', 'misc', 'out', 1),
 (19, 'static', 'inner', 'in', 1),
@@ -48,10 +48,10 @@ INSERT INTO `ts3admin_container` (`id`, `name`, `tpl`, `typ`, `area`) VALUES (10
 -- --------------------------------------------------------
 
 -- 
--- Tabellenstruktur für Tabelle `ts3admin_log`
+-- Tabellenstruktur für Tabelle `eviladmin_log`
 -- 
 
-CREATE TABLE `ts3admin_log` (
+CREATE TABLE `eviladmin_log` (
   `id` int(11) NOT NULL auto_increment,
   `member_id` int(11) default NULL,
   `target_id` int(11) default NULL,
@@ -63,17 +63,17 @@ CREATE TABLE `ts3admin_log` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- 
--- Daten für Tabelle `ts3admin_log`
+-- Daten für Tabelle `eviladmin_log`
 -- 
 
 
 -- --------------------------------------------------------
 
 -- 
--- Tabellenstruktur für Tabelle `ts3admin_members`
+-- Tabellenstruktur für Tabelle `eviladmin_members`
 -- 
 
-CREATE TABLE `ts3admin_members` (
+CREATE TABLE `eviladmin_members` (
   `id` int(11) NOT NULL auto_increment,
   `member` varchar(20) collate latin1_general_ci NOT NULL,
   `password` varchar(40) collate latin1_general_ci NOT NULL,
@@ -93,18 +93,18 @@ CREATE TABLE `ts3admin_members` (
 ) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci AUTO_INCREMENT=3 ;
 
 -- 
--- Daten für Tabelle `ts3admin_members`
+-- Daten für Tabelle `eviladmin_members`
 -- 
 
-INSERT INTO `ts3admin_members` (`id`, `member`, `password`, `email`, `surname`, `name`, `country`, `regdate`, `lastip`, `ugroup`, `status`, `user_lastonline`, `user_lastonline_temp`, `loggedin`, `verify`) VALUES (1, '1', '131cd1778c5c98e7bc4b1c7243c2537c', 'admin', '', 'admin', 'DE', '2010-01-28 ', '', 1, 1, 0, 0, 0, '1');
+INSERT INTO `eviladmin_members` (`id`, `member`, `password`, `email`, `surname`, `name`, `country`, `regdate`, `lastip`, `ugroup`, `status`, `user_lastonline`, `user_lastonline_temp`, `loggedin`, `verify`) VALUES (1, '1', '131cd1778c5c98e7bc4b1c7243c2537c', 'admin', '', 'admin', 'DE', '2010-01-28 ', '', 1, 1, 0, 0, 0, '1');
 
 -- --------------------------------------------------------
 
 -- 
--- Tabellenstruktur für Tabelle `ts3admin_members_notice`
+-- Tabellenstruktur für Tabelle `eviladmin_members_notice`
 -- 
 
-CREATE TABLE `ts3admin_members_notice` (
+CREATE TABLE `eviladmin_members_notice` (
   `id` int(11) NOT NULL auto_increment,
   `id_customer` int(11) default NULL,
   `id_author` int(11) default NULL,
@@ -117,17 +117,17 @@ CREATE TABLE `ts3admin_members_notice` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- 
--- Daten für Tabelle `ts3admin_members_notice`
+-- Daten für Tabelle `eviladmin_members_notice`
 -- 
 
 
 -- --------------------------------------------------------
 
 -- 
--- Tabellenstruktur für Tabelle `ts3admin_permissions`
+-- Tabellenstruktur für Tabelle `eviladmin_permissions`
 -- 
 
-CREATE TABLE `ts3admin_permissions` (
+CREATE TABLE `eviladmin_permissions` (
   `group_id` int(11) NOT NULL default '0',
   `section_id` int(11) NOT NULL default '0',
   `permissions` text collate latin1_general_ci NOT NULL,
@@ -135,19 +135,19 @@ CREATE TABLE `ts3admin_permissions` (
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci PACK_KEYS=0;
 
 -- 
--- Daten für Tabelle `ts3admin_permissions`
+-- Daten für Tabelle `eviladmin_permissions`
 -- 
 
-INSERT INTO `ts3admin_permissions` (`group_id`, `section_id`, `permissions`) VALUES (1, 1, 'alles'),
+INSERT INTO `eviladmin_permissions` (`group_id`, `section_id`, `permissions`) VALUES (1, 1, 'alles'),
 (5, 1, 'customerpanel');
 
 -- --------------------------------------------------------
 
 -- 
--- Tabellenstruktur für Tabelle `ts3admin_rootserver`
+-- Tabellenstruktur für Tabelle `eviladmin_rootserver`
 -- 
 
-CREATE TABLE `ts3admin_rootserver` (
+CREATE TABLE `eviladmin_rootserver` (
   `id` int(11) NOT NULL auto_increment,
   `name` varchar(128) NOT NULL,
   `serverip` varchar(20) NOT NULL,
@@ -164,17 +164,17 @@ CREATE TABLE `ts3admin_rootserver` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- 
--- Daten für Tabelle `ts3admin_rootserver`
+-- Daten für Tabelle `eviladmin_rootserver`
 -- 
 
 
 -- --------------------------------------------------------
 
 -- 
--- Tabellenstruktur für Tabelle `ts3admin_settings`
+-- Tabellenstruktur für Tabelle `eviladmin_settings`
 -- 
 
-CREATE TABLE `ts3admin_settings` (
+CREATE TABLE `eviladmin_settings` (
   `id` int(11) NOT NULL auto_increment,
   `sitename` varchar(150) default NULL,
   `url` varchar(100) default NULL,
@@ -197,18 +197,18 @@ CREATE TABLE `ts3admin_settings` (
 ) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
 
 -- 
--- Daten für Tabelle `ts3admin_settings`
+-- Daten für Tabelle `eviladmin_settings`
 -- 
 
-INSERT INTO `ts3admin_settings` (`id`, `sitename`, `url`, `infoemail`, `firma`, `name`, `street`, `city`, `zipcode`, `country`, `taxnumber`, `phone`, `prefix_firma`, `maintenance`, `theme`, `lang`, `session_timeout`, `version`) VALUES (1, 'teamspeak3.de - connect to the real world! - Teamspeak Server für dich!', 'teamspeak3.de', 'info@tld.de', 'NEX-network.de', '', '', '', '', 'DE', '', '', 'NEX', '0', 'eCP', 'de', '180', '0.9e');
+INSERT INTO `eviladmin_settings` (`id`, `sitename`, `url`, `infoemail`, `firma`, `name`, `street`, `city`, `zipcode`, `country`, `taxnumber`, `phone`, `prefix_firma`, `maintenance`, `theme`, `lang`, `session_timeout`, `version`) VALUES (1, 'teamspeak3.de - connect to the real world! - Teamspeak Server für dich!', 'teamspeak3.de', 'info@tld.de', 'NEX-network.de', '', '', '', '', 'DE', '', '', 'NEX', '0', 'eCP', 'de', '180', '0.9e');
 
 -- --------------------------------------------------------
 
 -- 
--- Tabellenstruktur für Tabelle `ts3admin_usergroup`
+-- Tabellenstruktur für Tabelle `eviladmin_usergroup`
 -- 
 
-CREATE TABLE `ts3admin_usergroup` (
+CREATE TABLE `eviladmin_usergroup` (
   `ugroup` mediumint(8) unsigned NOT NULL auto_increment,
   `groupname_single` varchar(75) collate latin1_general_ci NOT NULL default '',
   `groupname` varchar(100) collate latin1_general_ci NOT NULL default '',
@@ -217,19 +217,19 @@ CREATE TABLE `ts3admin_usergroup` (
 ) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci PACK_KEYS=0 AUTO_INCREMENT=7 ;
 
 -- 
--- Daten für Tabelle `ts3admin_usergroup`
+-- Daten für Tabelle `eviladmin_usergroup`
 -- 
 
-INSERT INTO `ts3admin_usergroup` (`ugroup`, `groupname_single`, `groupname`) VALUES (1, 'Administrator', 'Administratoren'),
+INSERT INTO `eviladmin_usergroup` (`ugroup`, `groupname_single`, `groupname`) VALUES (1, 'Administrator', 'Administratoren'),
 (5, 'Kunde', 'Kunden');
 
 -- --------------------------------------------------------
 
 -- 
--- Tabellenstruktur für Tabelle `ts3admin_voiceserver`
+-- Tabellenstruktur für Tabelle `eviladmin_voiceserver`
 -- 
 
-CREATE TABLE `ts3admin_voiceserver` (
+CREATE TABLE `eviladmin_voiceserver` (
   `id` int(11) NOT NULL auto_increment,
   `memberid` int(11) NOT NULL default '0',
   `masterid` int(11) NOT NULL default '0',
@@ -245,17 +245,17 @@ CREATE TABLE `ts3admin_voiceserver` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- 
--- Daten für Tabelle `ts3admin_voiceserver`
+-- Daten für Tabelle `eviladmin_voiceserver`
 -- 
 
 
 -- --------------------------------------------------------
 
 -- 
--- Tabellenstruktur für Tabelle `ts3admin_voiceserver_master`
+-- Tabellenstruktur für Tabelle `eviladmin_voiceserver_master`
 -- 
 
-CREATE TABLE `ts3admin_voiceserver_master` (
+CREATE TABLE `eviladmin_voiceserver_master` (
   `id` int(11) NOT NULL auto_increment,
   `rootserverid` int(11) NOT NULL default '0',
   `serverip` varchar(20) NOT NULL,
@@ -269,6 +269,6 @@ CREATE TABLE `ts3admin_voiceserver_master` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- 
--- Daten für Tabelle `ts3admin_voiceserver_master`
+-- Daten für Tabelle `eviladmin_voiceserver_master`
 -- 
 

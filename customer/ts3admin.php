@@ -1,6 +1,6 @@
 <?php 
 
-// ts3admin.php
+// eviladmin.php
 
 // Info:
 //
@@ -202,7 +202,7 @@ if (isset($act)) {
 		
 			$clientdblist = $ts3->clientdblist_find($start,$duration,$methode,$value);
 		
-			$tmpl->assign('pages', pagenav($seiten, prepage(), "<a href=\"admin.php?m=ts3admin&act=user&sid={$sid}&amp;pp=$duration&amp;page={s}\">{t}</a> "));
+			$tmpl->assign('pages', pagenav($seiten, prepage(), "<a href=\"admin.php?m=eviladmin&act=user&sid={$sid}&amp;pp=$duration&amp;page={s}\">{t}</a> "));
 		
 			$tmpl->assign("pp", $pp);
 			$tmpl->assign("page", $page);
@@ -223,7 +223,7 @@ if (isset($act)) {
 		
 			$clientdblist = $ts3->clientdblist($start,$duration);
 		
-			$tmpl->assign('pages', pagenav($seiten, prepage(), "<a href=\"admin.php?m=ts3admin&act=user&sid={$sid}&amp;pp=$duration&amp;page={s}\">{t}</a> "));
+			$tmpl->assign('pages', pagenav($seiten, prepage(), "<a href=\"admin.php?m=eviladmin&act=user&sid={$sid}&amp;pp=$duration&amp;page={s}\">{t}</a> "));
 		
 			$tmpl->assign("pp", $pp);
 			$tmpl->assign("page", $page);
@@ -623,7 +623,7 @@ $ts3->disconnect();
 	
 	$customer = TRUE;
 	
-	$tmpl->assign("shownavi", "ts3admin");
+	$tmpl->assign("shownavi", "eviladmin");
 	$tmpl->assign("customer", $customer);
 	$tmpl->assign("id", $id);
     $tmpl->assign("masterid", $masterid);
@@ -669,6 +669,6 @@ $ts3->disconnect();
     $tmpl->assign("admin", $ADMIN);
     $tmpl->assign("CUSTID", $CUSTID);
 
-	$tmpl->assign("content", parsetrue("container/".container("static"), "Servermanagement" , $tmpl->fetch("ts3admin/ts3admin.tpl"))); 
+	$tmpl->assign("content", parsetrue("container/".container("static"), "Servermanagement" , $tmpl->fetch("eviladmin/eviladmin.tpl"))); 
 	
 ?>
