@@ -28,7 +28,7 @@
     {/foreach} </div>
   <div class="contentspacer"></div>
   {/if}
-  <div class="menu_title">ts3admin</div>
+  <div class="menu_title">TS3Admin</div>
       <div class="menu">&nbsp;</div>
   <div id="10">
     <div class="menu_kategorie_green">{$lang.navi_user}</div>

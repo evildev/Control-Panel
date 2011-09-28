@@ -404,6 +404,7 @@ $nex_lang['ts3admin_sg_name'] = "Server Gruppen Name";
 $nex_lang['ts3admin_token'] = "Token";
 $nex_lang['ts3admin_channel'] = "Channel";
 $nex_lang['ts3admin_channelgroup'] = "Channel Gruppe";
+$nex_lang['ts3admin_servergroup'] = "Server Gruppe";
 $nex_lang['ts3admin_info_delete_token'] = "Token entfernen";
 $nex_lang['ts3admin_channel'] = "Channel";
 $nex_lang['ts3admin_dont_allow'] = "Nicht erlauben";

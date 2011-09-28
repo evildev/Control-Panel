@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.12, created on 2011-09-25 20:53:12
+<?php /* Smarty version 2.6.12, created on 2011-09-27 21:29:51
          compiled from navi/admin_navigation.tpl */ ?>
 <!-- Content Navigation -->
 
@@ -55,7 +55,7 @@ if ($this->_foreach['vo']['total'] > 0):
     <?php endforeach; endif; unset($_from); ?> </div>
   <div class="contentspacer"></div>
   <?php endif; ?>
-  <div class="menu_title">ts3admin</div>
+  <div class="menu_title">TS3Admin</div>
       <div class="menu">&nbsp;</div>
   <div id="10">
     <div class="menu_kategorie_green"><?php echo $this->_tpl_vars['lang']['navi_user']; ?>

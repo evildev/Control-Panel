@@ -3,7 +3,7 @@
 
 if(!defined("BASEDIR")) exit;
 if (!empty($_POST['email']) && !empty($_POST['pass'])) {
-	$sql = $db->Query("SELECT * FROM " . prefix_nexmin . "members WHERE ( email='".escs($_POST['email'])."' AND password='".md5($_POST["pass"])."') ");
+	$sql = $db->Query("SELECT * FROM " . prefix_nexmin . "members WHERE ( email='".escs($_POST['email'])."' AND password='".md5($_POST["pass"])."' AND verify = 1) ");
 	$row = $sql->fetchrow();
 	$name = $row->name;
 	$email = $row->email;
