@@ -89,7 +89,7 @@ CREATE TABLE `ts3admin_members` (
   `user_lastonline_temp` int(11) default NULL,
   `loggedin` int(1) NOT NULL default '0',
   `verify` varchar(30) collate latin1_general_ci default NULL,
-  àctive` int(30) default NULL,
+  `active` int(30) default NULL,
   PRIMARY KEY  (`id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci AUTO_INCREMENT=3 ;
 

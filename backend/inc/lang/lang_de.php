@@ -70,7 +70,7 @@ $nex_lang['no'] = "Nein";
 
 $nex_lang['welcome'] = "Willkommen";
 $nex_lang['header_text'] = "Hier kannst du dich in das WI einloggen!";
-$nex_lang['logout'] = "Ich m&ouml;chte mich wieder abmelden!";
+$nex_lang['logout'] = "Logout!";
 $nex_lang['welcome'] = "Willkommen";
 $nex_lang['adminarea'] = "Adminbereich";
 $nex_lang['goto_adminarea'] = "Zum Adminbereich";
